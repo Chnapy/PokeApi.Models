@@ -1,0 +1,105 @@
+name: Sync PokeApi Models
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
+    paths-ignore:
+      - "**/*.md"
+  schedule:
+    - cron: "0 6 * * *" # each day 6h UTC
+
+permissions:
+  contents: write # commit hash + generated files
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get PokeApi/api-data last commit hash
+        id: remote_commit
+        run: |
+          HASH=$(git ls-remote https://github.com/PokeAPI/api-data.git HEAD | cut -f1)
+          echo "hash=$HASH" >> $GITHUB_OUTPUT
+
+      - name: Read local commit hash
+        id: local_commit
+        run: |
+          echo "hash=$(cat last-commit.txt)" >> $GITHUB_OUTPUT
+
+      - name: Compare commit hashs
+        id: check
+        run: |
+          if [ "${{ steps.remote_commit.outputs.hash }}" = "${{ steps.local_commit.outputs.hash }}" ]; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Clone PokeApi/api-data (schemas only)
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git clone --depth=1 --filter=blob:none --sparse \
+            https://github.com/PokeAPI/api-data.git pokeapi-data
+          cd pokeapi-data
+          git sparse-checkout set data/schema/v2
+
+      - name: Setup .NET
+        if: steps.check.outputs.changed == 'true'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: "8.0.x"
+
+      - name: Generate C# classes
+        if: steps.check.outputs.changed == 'true'
+        id: generate
+        run: |
+          dotnet run --project SchemaGenerator -- \
+            pokeapi-data/data \
+            PokeApi.Models/Generated \
+            changed.txt
+          echo "changed=$(cat changed.txt)" >> $GITHUB_OUTPUT
+
+      - name: dotnet build
+        if: steps.generate.outputs.changed == 'true'
+        run: dotnet build PokeApi.Models/PokeApi.Models.csproj --configuration Release
+
+      - name: Compute NuGet version
+        if: steps.generate.outputs.changed == 'true'
+        id: version
+        run: |
+          VERSION="1.0.${{ github.run_number }}"
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+
+      - name: dotnet pack
+        if: steps.generate.outputs.changed == 'true'
+        run: |
+          dotnet pack PokeApi.Models/PokeApi.Models.csproj \
+            --configuration Release \
+            --no-build \
+            -p:PackageVersion=${{ steps.version.outputs.version }} \
+            --output ./nupkg
+
+      - name: Publish on NuGet.org
+        if: github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true'
+        run: |
+          dotnet nuget push ./nupkg/*.nupkg \
+            --api-key ${{ secrets.NUGET_API_KEY }} \
+            --source https://api.nuget.org/v3/index.json \
+            --skip-duplicate
+
+      - name: Update last-commit.txt then commit
+        if: github.event_name != 'pull_request' && steps.check.outputs.changed == 'true'
+        run: |
+          echo "${{ steps.remote_commit.outputs.hash }}" > last-commit.txt
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add last-commit.txt PokeApi.Models/Generated
+          git commit -m "chore: sync models from PokeApi/api-data @ ${{ steps.remote_commit.outputs.hash }}"
+          git push
