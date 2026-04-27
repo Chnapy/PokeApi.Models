@@ -12,6 +12,7 @@ on:
 
 permissions:
   contents: write # commit hash + generated files
+  id-token: write # NuGet
 
 jobs:
   sync:
@@ -86,10 +87,17 @@ jobs:
             -p:PackageVersion=${{ steps.version.outputs.version }} \
             --output ./nupkg
 
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: login
+        with:
+          user: chnapy
+
       - name: Publish on NuGet.org
         if: github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true'
         run: |
           dotnet nuget push ./nupkg/*.nupkg \
+            --api-key ${{steps.login.outputs.NUGET_API_KEY}} \
             --source https://api.nuget.org/v3/index.json \
             --skip-duplicate
 
