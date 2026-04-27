@@ -48,7 +48,7 @@ jobs:
           fi
 
       - name: Clone PokeApi/api-data (schemas only)
-        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
+        if: github.event_name == 'pull_request' || steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: |
           git clone --depth=1 --filter=blob:none --sparse \
             https://github.com/PokeAPI/api-data.git pokeapi-data
@@ -56,13 +56,13 @@ jobs:
           git sparse-checkout set data/schema/v2
 
       - name: Setup .NET
-        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
+        if: github.event_name == 'pull_request' || steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
 
       - name: Generate C# classes
-        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
+        if: github.event_name == 'pull_request' || steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         id: generate
         run: |
           dotnet run --project SchemaGenerator -- \
@@ -72,7 +72,7 @@ jobs:
           echo "changed=$(cat changed.txt)" >> $GITHUB_OUTPUT
 
       - name: dotnet build
-        if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
+        if: github.event_name == 'pull_request' || steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: dotnet build PokeApi.Models/PokeApi.Models.csproj --configuration Release
 
       - name: Copy meta files to package
