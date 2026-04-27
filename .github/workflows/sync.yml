@@ -71,6 +71,10 @@ jobs:
         if: steps.generate.outputs.changed == 'true'
         run: dotnet build PokeApi.Models/PokeApi.Models.csproj --configuration Release
 
+      - name: Copy README to package
+        if: steps.generate.outputs.changed == 'true'
+        run: cp README.md PokeApi.Models/
+
       - name: Compute NuGet version
         if: steps.generate.outputs.changed == 'true'
         id: version
