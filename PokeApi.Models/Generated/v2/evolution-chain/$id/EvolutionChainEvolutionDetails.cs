@@ -11,25 +11,25 @@ public partial class EvolutionChainEvolutionDetails
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("base_form")]
-    public EvolutionChainBaseForm BaseForm { get; set; } = default!;
+    public NamedApiResource? BaseForm { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("gender")]
     public int? Gender { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("held_item")]
-    public EvolutionChainHeldItem HeldItem { get; set; } = default!;
+    public NamedApiResource? HeldItem { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("item")]
-    public EvolutionChainItem Item { get; set; } = default!;
+    public NamedApiResource? Item { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("known_move")]
-    public EvolutionChainKnownMove KnownMove { get; set; } = default!;
+    public NamedApiResource? KnownMove { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("known_move_type")]
-    public EvolutionChainKnownMoveType KnownMoveType { get; set; } = default!;
+    public NamedApiResource? KnownMoveType { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("location")]
-    public EvolutionChainLocation Location { get; set; } = default!;
+    public NamedApiResource? Location { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("min_affection")]
     public int? MinAffection { get; set; } = default!;
@@ -59,13 +59,13 @@ public partial class EvolutionChainEvolutionDetails
     public bool NeedsOverworldRain { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("party_species")]
-    public EvolutionChainPartySpecies PartySpecies { get; set; } = default!;
+    public NamedApiResource? PartySpecies { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("party_type")]
-    public EvolutionChainPartyType PartyType { get; set; } = default!;
+    public NamedApiResource? PartyType { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public EvolutionChainRegion Region { get; set; } = default!;
+    public NamedApiResource? Region { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("relative_physical_stats")]
     public int? RelativePhysicalStats { get; set; } = default!;
@@ -74,7 +74,7 @@ public partial class EvolutionChainEvolutionDetails
     public string TimeOfDay { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("trade_species")]
-    public EvolutionChainTradeSpecies TradeSpecies { get; set; } = default!;
+    public NamedApiResource? TradeSpecies { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("trigger")]
     public NamedApiResource Trigger { get; set; } = new NamedApiResource();
@@ -83,7 +83,7 @@ public partial class EvolutionChainEvolutionDetails
     public bool TurnUpsideDown { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("used_move")]
-    public EvolutionChainUsedMove UsedMove { get; set; } = default!;
+    public NamedApiResource? UsedMove { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

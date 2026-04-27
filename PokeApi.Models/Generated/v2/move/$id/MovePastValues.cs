@@ -26,7 +26,7 @@ public partial class MovePastValues
     public int? Pp { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("type")]
-    public MoveType Type { get; set; } = default!;
+    public NamedApiResource? Type { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();

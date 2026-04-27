@@ -14,13 +14,13 @@ public partial class Move
     public int? Accuracy { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_combos")]
-    public MoveContestCombos ContestCombos { get; set; } = default!;
+    public MoveContestCombos? ContestCombos { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_effect")]
-    public MoveContestEffect ContestEffect { get; set; } = default!;
+    public ApiResource? ContestEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
-    public MoveContestType ContestType { get; set; } = default!;
+    public NamedApiResource? ContestType { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("damage_class")]
     public NamedApiResource DamageClass { get; set; } = new NamedApiResource();
@@ -50,7 +50,7 @@ public partial class Move
     public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
 
     [System.Text.Json.Serialization.JsonPropertyName("meta")]
-    public MoveMeta Meta { get; set; } = default!;
+    public MoveMeta? Meta { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
@@ -74,7 +74,7 @@ public partial class Move
     public System.Collections.Generic.ICollection<MoveStatChanges> StatChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveStatChanges>();
 
     [System.Text.Json.Serialization.JsonPropertyName("super_contest_effect")]
-    public MoveSuperContestEffect SuperContestEffect { get; set; } = default!;
+    public ApiResource? SuperContestEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("target")]
     public NamedApiResource Target { get; set; } = new NamedApiResource();

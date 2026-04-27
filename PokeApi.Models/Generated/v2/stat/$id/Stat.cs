@@ -32,7 +32,7 @@ public partial class Stat
     public bool IsBattleOnly { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_damage_class")]
-    public StatMoveDamageClass MoveDamageClass { get; set; } = default!;
+    public NamedApiResource? MoveDamageClass { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;

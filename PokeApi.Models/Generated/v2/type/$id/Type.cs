@@ -23,7 +23,7 @@ public partial class Type
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_damage_class")]
-    public TypeMoveDamageClass MoveDamageClass { get; set; } = default!;
+    public NamedApiResource? MoveDamageClass { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("moves")]
     public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

@@ -11,7 +11,7 @@ public partial class EvolutionChain
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_item")]
-    public EvolutionChainBabyTriggerItem BabyTriggerItem { get; set; } = default!;
+    public NamedApiResource? BabyTriggerItem { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("chain")]
     public EvolutionChainChain Chain { get; set; } = new EvolutionChainChain();

@@ -11,19 +11,19 @@ public partial class Nature
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("decreased_stat")]
-    public NatureDecreasedStat DecreasedStat { get; set; } = default!;
+    public NamedApiResource? DecreasedStat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("hates_flavor")]
-    public NatureHatesFlavor HatesFlavor { get; set; } = default!;
+    public NamedApiResource? HatesFlavor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("increased_stat")]
-    public NatureIncreasedStat IncreasedStat { get; set; } = default!;
+    public NamedApiResource? IncreasedStat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("likes_flavor")]
-    public NatureLikesFlavor LikesFlavor { get; set; } = default!;
+    public NamedApiResource? LikesFlavor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_battle_style_preferences")]
     public System.Collections.Generic.ICollection<NatureMoveBattleStylePreferences> MoveBattleStylePreferences { get; set; } = new System.Collections.ObjectModel.Collection<NatureMoveBattleStylePreferences>();

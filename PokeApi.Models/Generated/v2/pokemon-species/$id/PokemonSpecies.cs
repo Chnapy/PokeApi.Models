@@ -26,7 +26,7 @@ public partial class PokemonSpecies
     public ApiResource EvolutionChain { get; set; } = new ApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("evolves_from_species")]
-    public PokemonSpeciesEvolvesFromSpecies EvolvesFromSpecies { get; set; } = default!;
+    public NamedApiResource? EvolvesFromSpecies { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
     public System.Collections.Generic.ICollection<PokemonSpeciesFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesFlavorTextEntries>();
@@ -50,7 +50,7 @@ public partial class PokemonSpecies
     public NamedApiResource GrowthRate { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("habitat")]
-    public PokemonSpeciesHabitat Habitat { get; set; } = default!;
+    public NamedApiResource? Habitat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("has_gender_differences")]
     public bool HasGenderDifferences { get; set; } = default!;

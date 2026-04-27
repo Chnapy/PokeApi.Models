@@ -29,7 +29,7 @@ public partial class Pokedex
     public System.Collections.Generic.ICollection<PokedexPokemonEntries> PokemonEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokedexPokemonEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public PokedexRegion Region { get; set; } = default!;
+    public NamedApiResource? Region { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("version_groups")]
     public System.Collections.Generic.ICollection<NamedApiResource> VersionGroups { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

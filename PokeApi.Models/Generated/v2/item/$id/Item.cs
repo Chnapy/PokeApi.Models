@@ -14,7 +14,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<NamedApiResource> Attributes { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_for")]
-    public ItemBabyTriggerFor BabyTriggerFor { get; set; } = default!;
+    public ApiResource? BabyTriggerFor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("category")]
     public NamedApiResource Category { get; set; } = new NamedApiResource();
@@ -29,7 +29,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<VersionGroupFlavorText> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<VersionGroupFlavorText>();
 
     [System.Text.Json.Serialization.JsonPropertyName("fling_effect")]
-    public ItemFlingEffect FlingEffect { get; set; } = default!;
+    public NamedApiResource? FlingEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("fling_power")]
     public int? FlingPower { get; set; } = default!;
