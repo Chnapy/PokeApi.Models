@@ -11,13 +11,13 @@ public partial class Pokemon
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("abilities")]
-    public System.Collections.Generic.ICollection<Pokemon> Abilities { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonAbilities> Abilities { get; set; } = new System.Collections.ObjectModel.Collection<PokemonAbilities>();
 
     [System.Text.Json.Serialization.JsonPropertyName("base_experience")]
     public int? BaseExperience { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("cries")]
-    public Pokemon Cries { get; set; } = new Pokemon();
+    public PokemonCries Cries { get; set; } = new PokemonCries();
 
     [System.Text.Json.Serialization.JsonPropertyName("forms")]
     public System.Collections.Generic.ICollection<NamedApiResource> Forms { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
@@ -29,7 +29,7 @@ public partial class Pokemon
     public int Height { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("held_items")]
-    public System.Collections.Generic.ICollection<Pokemon> HeldItems { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonHeldItems> HeldItems { get; set; } = new System.Collections.ObjectModel.Collection<PokemonHeldItems>();
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
@@ -41,7 +41,7 @@ public partial class Pokemon
     public string LocationAreaEncounters { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("moves")]
-    public System.Collections.Generic.ICollection<Pokemon> Moves { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonMoves> Moves { get; set; } = new System.Collections.ObjectModel.Collection<PokemonMoves>();
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
@@ -50,25 +50,25 @@ public partial class Pokemon
     public int Order { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("past_abilities")]
-    public System.Collections.Generic.ICollection<Pokemon> PastAbilities { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonPastAbilities> PastAbilities { get; set; } = new System.Collections.ObjectModel.Collection<PokemonPastAbilities>();
 
     [System.Text.Json.Serialization.JsonPropertyName("past_stats")]
-    public System.Collections.Generic.ICollection<Pokemon> PastStats { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonPastStats> PastStats { get; set; } = new System.Collections.ObjectModel.Collection<PokemonPastStats>();
 
     [System.Text.Json.Serialization.JsonPropertyName("past_types")]
-    public System.Collections.Generic.ICollection<Pokemon> PastTypes { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonPastTypes> PastTypes { get; set; } = new System.Collections.ObjectModel.Collection<PokemonPastTypes>();
 
     [System.Text.Json.Serialization.JsonPropertyName("species")]
     public NamedApiResource Species { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
-    public Pokemon Sprites { get; set; } = new Pokemon();
+    public PokemonSprites Sprites { get; set; } = new PokemonSprites();
 
     [System.Text.Json.Serialization.JsonPropertyName("stats")]
-    public System.Collections.Generic.ICollection<Pokemon> Stats { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonStats> Stats { get; set; } = new System.Collections.ObjectModel.Collection<PokemonStats>();
 
     [System.Text.Json.Serialization.JsonPropertyName("types")]
-    public System.Collections.Generic.ICollection<Pokemon> Types { get; set; } = new System.Collections.ObjectModel.Collection<Pokemon>();
+    public System.Collections.Generic.ICollection<PokemonTypes> Types { get; set; } = new System.Collections.ObjectModel.Collection<PokemonTypes>();
 
     [System.Text.Json.Serialization.JsonPropertyName("weight")]
     public int Weight { get; set; } = default!;

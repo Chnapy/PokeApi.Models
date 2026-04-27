@@ -17,7 +17,7 @@ public partial class Meta
     public string Hash { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("tag")]
-    public Meta? Tag { get; set; } = default!;
+    public MetaTag? Tag { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -26,10 +26,10 @@ public partial class PokemonSpecies
     public ApiResource EvolutionChain { get; set; } = new ApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("evolves_from_species")]
-    public PokemonSpecies EvolvesFromSpecies { get; set; } = default!;
+    public PokemonSpeciesEvolvesFromSpecies EvolvesFromSpecies { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
-    public System.Collections.Generic.ICollection<PokemonSpecies> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpecies>();
+    public System.Collections.Generic.ICollection<PokemonSpeciesFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesFlavorTextEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("form_descriptions")]
     public System.Collections.Generic.ICollection<Description> FormDescriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
@@ -41,7 +41,7 @@ public partial class PokemonSpecies
     public int GenderRate { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("genera")]
-    public System.Collections.Generic.ICollection<PokemonSpecies> Genera { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpecies>();
+    public System.Collections.Generic.ICollection<PokemonSpeciesGenera> Genera { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesGenera>();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation")]
     public NamedApiResource Generation { get; set; } = new NamedApiResource();
@@ -50,7 +50,7 @@ public partial class PokemonSpecies
     public NamedApiResource GrowthRate { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("habitat")]
-    public PokemonSpecies Habitat { get; set; } = default!;
+    public PokemonSpeciesHabitat Habitat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("has_gender_differences")]
     public bool HasGenderDifferences { get; set; } = default!;
@@ -80,16 +80,16 @@ public partial class PokemonSpecies
     public int Order { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pal_park_encounters")]
-    public System.Collections.Generic.ICollection<PokemonSpecies> PalParkEncounters { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpecies>();
+    public System.Collections.Generic.ICollection<PokemonSpeciesPalParkEncounters> PalParkEncounters { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesPalParkEncounters>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokedex_numbers")]
-    public System.Collections.Generic.ICollection<PokemonSpecies> PokedexNumbers { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpecies>();
+    public System.Collections.Generic.ICollection<PokemonSpeciesPokedexNumbers> PokedexNumbers { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesPokedexNumbers>();
 
     [System.Text.Json.Serialization.JsonPropertyName("shape")]
     public NamedApiResource Shape { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("varieties")]
-    public System.Collections.Generic.ICollection<PokemonSpecies> Varieties { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpecies>();
+    public System.Collections.Generic.ICollection<PokemonSpeciesVarieties> Varieties { get; set; } = new System.Collections.ObjectModel.Collection<PokemonSpeciesVarieties>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

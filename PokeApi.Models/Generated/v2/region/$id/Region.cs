@@ -17,7 +17,7 @@ public partial class Region
     public System.Collections.Generic.ICollection<NamedApiResource> Locations { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("main_generation")]
-    public Region MainGeneration { get; set; } = default!;
+    public RegionMainGeneration MainGeneration { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;

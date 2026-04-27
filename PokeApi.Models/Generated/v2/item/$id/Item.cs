@@ -14,7 +14,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<NamedApiResource> Attributes { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_for")]
-    public Item BabyTriggerFor { get; set; } = default!;
+    public ItemBabyTriggerFor BabyTriggerFor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("category")]
     public NamedApiResource Category { get; set; } = new NamedApiResource();
@@ -29,7 +29,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<VersionGroupFlavorText> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<VersionGroupFlavorText>();
 
     [System.Text.Json.Serialization.JsonPropertyName("fling_effect")]
-    public Item FlingEffect { get; set; } = default!;
+    public ItemFlingEffect FlingEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("fling_power")]
     public int? FlingPower { get; set; } = default!;
@@ -38,7 +38,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<GenerationGameIndex> GameIndices { get; set; } = new System.Collections.ObjectModel.Collection<GenerationGameIndex>();
 
     [System.Text.Json.Serialization.JsonPropertyName("held_by_pokemon")]
-    public System.Collections.Generic.ICollection<Item> HeldByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<Item>();
+    public System.Collections.Generic.ICollection<ItemHeldByPokemon> HeldByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<ItemHeldByPokemon>();
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
@@ -53,7 +53,7 @@ public partial class Item
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
-    public Item Sprites { get; set; } = new Item();
+    public ItemSprites Sprites { get; set; } = new ItemSprites();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

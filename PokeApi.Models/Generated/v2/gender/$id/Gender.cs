@@ -17,7 +17,7 @@ public partial class Gender
     public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_species_details")]
-    public System.Collections.Generic.ICollection<Gender> PokemonSpeciesDetails { get; set; } = new System.Collections.ObjectModel.Collection<Gender>();
+    public System.Collections.Generic.ICollection<GenderPokemonSpeciesDetails> PokemonSpeciesDetails { get; set; } = new System.Collections.ObjectModel.Collection<GenderPokemonSpeciesDetails>();
 
     [System.Text.Json.Serialization.JsonPropertyName("required_for_evolution")]
     public System.Collections.Generic.ICollection<NamedApiResource> RequiredForEvolution { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

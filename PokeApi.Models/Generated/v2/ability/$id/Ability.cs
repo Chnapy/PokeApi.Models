@@ -11,13 +11,13 @@ public partial class Ability
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
-    public System.Collections.Generic.ICollection<Ability> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<Ability>();
+    public System.Collections.Generic.ICollection<AbilityEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<AbilityEffectChanges>();
 
     [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
     public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
 
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
-    public System.Collections.Generic.ICollection<Ability> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<Ability>();
+    public System.Collections.Generic.ICollection<AbilityFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<AbilityFlavorTextEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation")]
     public NamedApiResource Generation { get; set; } = new NamedApiResource();
@@ -35,7 +35,7 @@ public partial class Ability
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
-    public System.Collections.Generic.ICollection<Ability> Pokemon { get; set; } = new System.Collections.ObjectModel.Collection<Ability>();
+    public System.Collections.Generic.ICollection<AbilityPokemon> Pokemon { get; set; } = new System.Collections.ObjectModel.Collection<AbilityPokemon>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

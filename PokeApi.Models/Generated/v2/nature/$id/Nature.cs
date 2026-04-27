@@ -11,22 +11,22 @@ public partial class Nature
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("decreased_stat")]
-    public Nature DecreasedStat { get; set; } = default!;
+    public NatureDecreasedStat DecreasedStat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("hates_flavor")]
-    public Nature HatesFlavor { get; set; } = default!;
+    public NatureHatesFlavor HatesFlavor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("increased_stat")]
-    public Nature IncreasedStat { get; set; } = default!;
+    public NatureIncreasedStat IncreasedStat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("likes_flavor")]
-    public Nature LikesFlavor { get; set; } = default!;
+    public NatureLikesFlavor LikesFlavor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_battle_style_preferences")]
-    public System.Collections.Generic.ICollection<Nature> MoveBattleStylePreferences { get; set; } = new System.Collections.ObjectModel.Collection<Nature>();
+    public System.Collections.Generic.ICollection<NatureMoveBattleStylePreferences> MoveBattleStylePreferences { get; set; } = new System.Collections.ObjectModel.Collection<NatureMoveBattleStylePreferences>();
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
@@ -35,7 +35,7 @@ public partial class Nature
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokeathlon_stat_changes")]
-    public System.Collections.Generic.ICollection<Nature> PokeathlonStatChanges { get; set; } = new System.Collections.ObjectModel.Collection<Nature>();
+    public System.Collections.Generic.ICollection<NaturePokeathlonStatChanges> PokeathlonStatChanges { get; set; } = new System.Collections.ObjectModel.Collection<NaturePokeathlonStatChanges>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -11,7 +11,7 @@ public partial class LocationArea
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("encounter_method_rates")]
-    public System.Collections.Generic.ICollection<LocationArea> EncounterMethodRates { get; set; } = new System.Collections.ObjectModel.Collection<LocationArea>();
+    public System.Collections.Generic.ICollection<LocationAreaEncounterMethodRates> EncounterMethodRates { get; set; } = new System.Collections.ObjectModel.Collection<LocationAreaEncounterMethodRates>();
 
     [System.Text.Json.Serialization.JsonPropertyName("game_index")]
     public int GameIndex { get; set; } = default!;
@@ -29,7 +29,7 @@ public partial class LocationArea
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_encounters")]
-    public System.Collections.Generic.ICollection<LocationArea> PokemonEncounters { get; set; } = new System.Collections.ObjectModel.Collection<LocationArea>();
+    public System.Collections.Generic.ICollection<LocationAreaPokemonEncounters> PokemonEncounters { get; set; } = new System.Collections.ObjectModel.Collection<LocationAreaPokemonEncounters>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

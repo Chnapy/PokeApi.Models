@@ -11,7 +11,7 @@ public partial class PokeathlonStat
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("affecting_natures")]
-    public PokeathlonStat AffectingNatures { get; set; } = new PokeathlonStat();
+    public PokeathlonStatAffectingNatures AffectingNatures { get; set; } = new PokeathlonStatAffectingNatures();
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;

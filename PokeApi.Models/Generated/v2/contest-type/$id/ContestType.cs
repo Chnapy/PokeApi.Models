@@ -20,7 +20,7 @@ public partial class ContestType
     public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<ContestType> Names { get; set; } = new System.Collections.ObjectModel.Collection<ContestType>();
+    public System.Collections.Generic.ICollection<ContestTypeNames> Names { get; set; } = new System.Collections.ObjectModel.Collection<ContestTypeNames>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

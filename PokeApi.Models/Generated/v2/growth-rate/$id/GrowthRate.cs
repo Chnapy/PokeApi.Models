@@ -20,7 +20,7 @@ public partial class GrowthRate
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("levels")]
-    public System.Collections.Generic.ICollection<GrowthRate> Levels { get; set; } = new System.Collections.ObjectModel.Collection<GrowthRate>();
+    public System.Collections.Generic.ICollection<GrowthRateLevels> Levels { get; set; } = new System.Collections.ObjectModel.Collection<GrowthRateLevels>();
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;

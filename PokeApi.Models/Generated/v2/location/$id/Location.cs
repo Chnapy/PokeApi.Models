@@ -26,7 +26,7 @@ public partial class Location
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public Location Region { get; set; } = default!;
+    public LocationRegion Region { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

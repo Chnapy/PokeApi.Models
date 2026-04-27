@@ -11,7 +11,7 @@ public partial class PokemonShape
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("awesome_names")]
-    public System.Collections.Generic.ICollection<PokemonShape> AwesomeNames { get; set; } = new System.Collections.ObjectModel.Collection<PokemonShape>();
+    public System.Collections.Generic.ICollection<PokemonShapeAwesomeNames> AwesomeNames { get; set; } = new System.Collections.ObjectModel.Collection<PokemonShapeAwesomeNames>();
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;

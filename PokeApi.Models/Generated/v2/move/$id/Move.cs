@@ -14,13 +14,13 @@ public partial class Move
     public int? Accuracy { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_combos")]
-    public Move ContestCombos { get; set; } = default!;
+    public MoveContestCombos ContestCombos { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_effect")]
-    public Move ContestEffect { get; set; } = default!;
+    public MoveContestEffect ContestEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
-    public Move ContestType { get; set; } = default!;
+    public MoveContestType ContestType { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("damage_class")]
     public NamedApiResource DamageClass { get; set; } = new NamedApiResource();
@@ -29,13 +29,13 @@ public partial class Move
     public int? EffectChance { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
-    public System.Collections.Generic.ICollection<Move> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<Move>();
+    public System.Collections.Generic.ICollection<MoveEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveEffectChanges>();
 
     [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
     public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
 
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
-    public System.Collections.Generic.ICollection<Move> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<Move>();
+    public System.Collections.Generic.ICollection<MoveFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<MoveFlavorTextEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation")]
     public NamedApiResource Generation { get; set; } = new NamedApiResource();
@@ -50,7 +50,7 @@ public partial class Move
     public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
 
     [System.Text.Json.Serialization.JsonPropertyName("meta")]
-    public Move Meta { get; set; } = default!;
+    public MoveMeta Meta { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
@@ -59,7 +59,7 @@ public partial class Move
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("past_values")]
-    public System.Collections.Generic.ICollection<Move> PastValues { get; set; } = new System.Collections.ObjectModel.Collection<Move>();
+    public System.Collections.Generic.ICollection<MovePastValues> PastValues { get; set; } = new System.Collections.ObjectModel.Collection<MovePastValues>();
 
     [System.Text.Json.Serialization.JsonPropertyName("power")]
     public int? Power { get; set; } = default!;
@@ -71,10 +71,10 @@ public partial class Move
     public int Priority { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("stat_changes")]
-    public System.Collections.Generic.ICollection<Move> StatChanges { get; set; } = new System.Collections.ObjectModel.Collection<Move>();
+    public System.Collections.Generic.ICollection<MoveStatChanges> StatChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveStatChanges>();
 
     [System.Text.Json.Serialization.JsonPropertyName("super_contest_effect")]
-    public Move SuperContestEffect { get; set; } = default!;
+    public MoveSuperContestEffect SuperContestEffect { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("target")]
     public NamedApiResource Target { get; set; } = new NamedApiResource();

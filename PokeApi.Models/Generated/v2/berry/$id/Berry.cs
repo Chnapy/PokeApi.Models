@@ -14,7 +14,7 @@ public partial class Berry
     public NamedApiResource Firmness { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("flavors")]
-    public System.Collections.Generic.ICollection<Berry> Flavors { get; set; } = new System.Collections.ObjectModel.Collection<Berry>();
+    public System.Collections.Generic.ICollection<BerryFlavors> Flavors { get; set; } = new System.Collections.ObjectModel.Collection<BerryFlavors>();
 
     [System.Text.Json.Serialization.JsonPropertyName("growth_time")]
     public int GrowthTime { get; set; } = default!;

@@ -14,10 +14,10 @@ public partial class Stat
     public System.Collections.Generic.ICollection<NamedApiResource> AffectingItems { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("affecting_moves")]
-    public Stat AffectingMoves { get; set; } = new Stat();
+    public StatAffectingMoves AffectingMoves { get; set; } = new StatAffectingMoves();
 
     [System.Text.Json.Serialization.JsonPropertyName("affecting_natures")]
-    public Stat AffectingNatures { get; set; } = new Stat();
+    public StatAffectingNatures AffectingNatures { get; set; } = new StatAffectingNatures();
 
     [System.Text.Json.Serialization.JsonPropertyName("characteristics")]
     public System.Collections.Generic.ICollection<ApiResource> Characteristics { get; set; } = new System.Collections.ObjectModel.Collection<ApiResource>();
@@ -32,7 +32,7 @@ public partial class Stat
     public bool IsBattleOnly { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_damage_class")]
-    public Stat MoveDamageClass { get; set; } = default!;
+    public StatMoveDamageClass MoveDamageClass { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;

@@ -26,10 +26,10 @@ public partial class Pokedex
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_entries")]
-    public System.Collections.Generic.ICollection<Pokedex> PokemonEntries { get; set; } = new System.Collections.ObjectModel.Collection<Pokedex>();
+    public System.Collections.Generic.ICollection<PokedexPokemonEntries> PokemonEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokedexPokemonEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public Pokedex Region { get; set; } = default!;
+    public PokedexRegion Region { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("version_groups")]
     public System.Collections.Generic.ICollection<NamedApiResource> VersionGroups { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

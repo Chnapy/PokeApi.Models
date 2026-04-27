@@ -20,7 +20,7 @@ public partial class PalParkArea
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_encounters")]
-    public System.Collections.Generic.ICollection<PalParkArea> PokemonEncounters { get; set; } = new System.Collections.ObjectModel.Collection<PalParkArea>();
+    public System.Collections.Generic.ICollection<PalParkAreaPokemonEncounters> PokemonEncounters { get; set; } = new System.Collections.ObjectModel.Collection<PalParkAreaPokemonEncounters>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

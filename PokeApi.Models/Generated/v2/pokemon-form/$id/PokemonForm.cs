@@ -44,10 +44,10 @@ public partial class PokemonForm
     public NamedApiResource Pokemon { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
-    public PokemonForm Sprites { get; set; } = new PokemonForm();
+    public PokemonFormSprites Sprites { get; set; } = new PokemonFormSprites();
 
     [System.Text.Json.Serialization.JsonPropertyName("types")]
-    public System.Collections.Generic.ICollection<PokemonForm> Types { get; set; } = new System.Collections.ObjectModel.Collection<PokemonForm>();
+    public System.Collections.Generic.ICollection<PokemonFormTypes> Types { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTypes>();
 
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();

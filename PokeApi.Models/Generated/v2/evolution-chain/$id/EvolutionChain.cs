@@ -11,10 +11,10 @@ public partial class EvolutionChain
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_item")]
-    public EvolutionChain BabyTriggerItem { get; set; } = default!;
+    public EvolutionChainBabyTriggerItem BabyTriggerItem { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("chain")]
-    public EvolutionChain Chain { get; set; } = new EvolutionChain();
+    public EvolutionChainChain Chain { get; set; } = new EvolutionChainChain();
 
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
