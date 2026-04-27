@@ -75,9 +75,9 @@ jobs:
         if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: dotnet build PokeApi.Models/PokeApi.Models.csproj --configuration Release
 
-      - name: Copy README to package
+      - name: Copy meta files to package
         if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
-        run: cp README.md PokeApi.Models/
+        run: cp README.md LICENSE PokeApi.Models/
 
       - name: Compute NuGet version
         if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
