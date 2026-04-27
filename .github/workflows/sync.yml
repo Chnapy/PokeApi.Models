@@ -2,6 +2,10 @@ name: Sync PokeApi Models
 
 on:
   workflow_dispatch:
+    inputs:
+      force:
+        type: boolean
+        required: false
   pull_request:
     branches:
       - main
@@ -44,7 +48,7 @@ jobs:
           fi
 
       - name: Clone PokeApi/api-data (schemas only)
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: |
           git clone --depth=1 --filter=blob:none --sparse \
             https://github.com/PokeAPI/api-data.git pokeapi-data
@@ -52,13 +56,13 @@ jobs:
           git sparse-checkout set data/schema/v2
 
       - name: Setup .NET
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "8.0.x"
 
       - name: Generate C# classes
-        if: steps.check.outputs.changed == 'true'
+        if: steps.check.outputs.changed == 'true' || github.event.inputs.force == 'true'
         id: generate
         run: |
           dotnet run --project SchemaGenerator -- \
@@ -68,22 +72,22 @@ jobs:
           echo "changed=$(cat changed.txt)" >> $GITHUB_OUTPUT
 
       - name: dotnet build
-        if: steps.generate.outputs.changed == 'true'
+        if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: dotnet build PokeApi.Models/PokeApi.Models.csproj --configuration Release
 
       - name: Copy README to package
-        if: steps.generate.outputs.changed == 'true'
+        if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: cp README.md PokeApi.Models/
 
       - name: Compute NuGet version
-        if: steps.generate.outputs.changed == 'true'
+        if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         id: version
         run: |
           VERSION="1.0.${{ github.run_number }}"
           echo "version=$VERSION" >> $GITHUB_OUTPUT
 
       - name: dotnet pack
-        if: steps.generate.outputs.changed == 'true'
+        if: steps.generate.outputs.changed == 'true' || github.event.inputs.force == 'true'
         run: |
           dotnet pack PokeApi.Models/PokeApi.Models.csproj \
             --configuration Release \
@@ -92,14 +96,14 @@ jobs:
             --output ./nupkg
 
       - name: NuGet login (OIDC → temp API key)
-        if: github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true'
+        if: (github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true') || github.event.inputs.force == 'true'
         uses: NuGet/login@v1
         id: login
         with:
           user: chnapy
 
       - name: Publish on NuGet.org
-        if: github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true'
+        if: (github.event_name != 'pull_request' && steps.generate.outputs.changed == 'true') || github.event.inputs.force == 'true'
         run: |
           dotnet nuget push ./nupkg/*.nupkg \
             --api-key ${{steps.login.outputs.NUGET_API_KEY}} \
@@ -107,7 +111,7 @@ jobs:
             --skip-duplicate
 
       - name: Update last-commit.txt then commit
-        if: github.event_name != 'pull_request' && steps.check.outputs.changed == 'true'
+        if: (github.event_name != 'pull_request' && steps.check.outputs.changed == 'true') || github.event.inputs.force == 'true'
         run: |
           echo "${{ steps.remote_commit.outputs.hash }}" > last-commit.txt
           git config user.name "github-actions[bot]"
