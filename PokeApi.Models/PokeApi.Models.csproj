@@ -4,6 +4,11 @@
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+
+    <Description>C# models for PokeAPI data, for REST and JSON files.</Description>
+    <Authors>Richard Haddad</Authors>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/Chnapy/PokeApi.Models</RepositoryUrl>
   </PropertyGroup>
 
 </Project>
