@@ -71,7 +71,7 @@ public class JsonSchemaLoader(string input)
                                     var requiredToRemove = requiredObj.Where(t =>
                                         t.Type == JTokenType.String
                                         && t.Value<string>() == property.Name
-                                    );
+                                    ).ToArray();
 
                                     foreach (var req in requiredToRemove)
                                         req.Remove();
