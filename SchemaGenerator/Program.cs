@@ -11,28 +11,19 @@ Console.WriteLine($"Output : {output}");
 Console.WriteLine($"Change result file : {changeResultFile}");
 Console.WriteLine();
 
-var schemaRoot = new DirectoryInfo(input);
-
 var schemaFiles = Directory.GetFiles(input, "*.json", SearchOption.AllDirectories)
-    .Order()
-    .ToList();
+    .Order();
 
-if (schemaFiles.Count == 0)
+if (!schemaFiles.Any())
 {
     throw new ArgumentException("No JSON file found");
 }
 
-Console.WriteLine($"{schemaFiles.Count} schemas found");
+Console.WriteLine($"{schemaFiles.Count()} schemas found");
 
-var schemas = new List<JsonSchema>();
+var schemaLoader = new JsonSchemaLoader(input);
 
-foreach (var schemaFile in schemaFiles)
-{
-    var schema = await JsonSchema.FromFileAsync(
-        schemaFile,
-        rootSchema => new PokeApiReferenceResolver(rootSchema, schemaRoot.FullName));
-    schemas.Add(schema);
-}
+var schemas = await schemaLoader.Load([.. schemaFiles]);
 
 var uniqueArtifacts = ArtifactGenerator.Generate([.. schemas]);
 
