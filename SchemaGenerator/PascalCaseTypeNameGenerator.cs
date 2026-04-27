@@ -12,9 +12,15 @@ public class PascalCaseTypeNameGenerator : ITypeNameGenerator
         }
 
         var finalName = BuildTypeNameFromPath(string.Join('/', pathParts));
-        return finalName.Length > 0
+        finalName = finalName.Length > 0
             ? finalName
             : "PokeApi";
+        // Console.WriteLine($"{finalName} - {ToPascalCase(typeNameHint)} - {schema.DocumentPath != null}");
+
+        if (schema.DocumentPath == null)
+            return finalName + ToPascalCase(typeNameHint);
+
+        return finalName;
     }
 
     private static string? GetDocumentPath(JsonSchema schema)
