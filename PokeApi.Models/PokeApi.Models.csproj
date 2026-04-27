@@ -7,8 +7,10 @@
 
     <Description>C# models for PokeAPI data, for REST and JSON files.</Description>
     <Authors>Richard Haddad</Authors>
+    <PackageTags>pokemon, pokeapi</PackageTags>
     <RepositoryType>git</RepositoryType>
     <RepositoryUrl>https://github.com/Chnapy/PokeApi.Models</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/Chnapy/PokeApi.Models</PackageProjectUrl>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
