@@ -18,7 +18,7 @@ public class PascalCaseTypeNameGenerator : ITypeNameGenerator
         // Console.WriteLine($"{finalName} - {ToPascalCase(typeNameHint)} - {schema.DocumentPath != null}");
 
         if (schema.DocumentPath == null)
-            return finalName + ToPascalCase(typeNameHint);
+            return finalName + ToPascalCase(typeNameHint ?? "");
 
         return finalName;
     }
