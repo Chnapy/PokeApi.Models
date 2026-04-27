@@ -44,6 +44,12 @@ var pokemon = JsonSerializer.Deserialize<Pokemon>(
     Path.Combine("../pokeapi/api-data/data", Pokemon.FileEndpoint)
 );
 
+// or using JsonTypeInfo from PokeApiJsonContext
+var pokemon = JsonSerializer.Deserialize(
+    Path.Combine("../pokeapi/api-data/data", Pokemon.FileEndpoint),
+    PokeApiJsonContext.Default.Pokemon
+);
+
 Console.WriteLine(pokemon?.Name);        // "pikachu"
 Console.WriteLine(pokemon?.BaseExperience); // 112
 ```
