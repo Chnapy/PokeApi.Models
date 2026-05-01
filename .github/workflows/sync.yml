@@ -117,5 +117,13 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add last-commit.txt PokeApi.Models/Generated
-          git commit -m "chore: sync models from PokeApi/api-data @ ${{ steps.remote_commit.outputs.hash }}"
+
+          staged_count=$(git diff --cached --name-only | wc -l | tr -d ' ')
+          if [ "$staged_count" -gt 1 ]; then
+            commit_message="chore: sync models from PokeApi/api-data @ ${{ steps.remote_commit.outputs.hash }}"
+          else
+            commit_message="chore: update last-commit from PokeApi/api-data @ ${{ steps.remote_commit.outputs.hash }}"
+          fi
+          
+          git commit -m "$commit_message"
           git push
