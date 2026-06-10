@@ -52,6 +52,9 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("min_steps")]
     public int? MinSteps { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("near_special_rock")]
+    public bool NearSpecialRock { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("needs_multiplayer")]
     public bool NeedsMultiplayer { get; set; } = default!;
 
