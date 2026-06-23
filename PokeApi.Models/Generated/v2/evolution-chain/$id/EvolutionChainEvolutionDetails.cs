@@ -13,11 +13,17 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("base_form")]
     public NamedApiResource? BaseForm { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("evolved_form")]
+    public NamedApiResource? EvolvedForm { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("gender")]
     public int? Gender { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("held_item")]
     public NamedApiResource? HeldItem { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_default")]
+    public bool IsDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("item")]
     public NamedApiResource? Item { get; set; } = default!;
@@ -87,6 +93,9 @@ public partial class EvolutionChainEvolutionDetails
 
     [System.Text.Json.Serialization.JsonPropertyName("used_move")]
     public NamedApiResource? UsedMove { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
+    public int VersionGroup { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
