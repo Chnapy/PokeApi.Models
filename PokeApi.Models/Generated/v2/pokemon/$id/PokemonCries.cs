@@ -11,7 +11,7 @@ public partial class PokemonCries
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("latest")]
-    public string Latest { get; set; } = default!;
+    public string? Latest { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("legacy")]
     public string? Legacy { get; set; } = default!;
