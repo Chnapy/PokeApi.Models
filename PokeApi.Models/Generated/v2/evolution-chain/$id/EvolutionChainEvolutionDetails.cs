@@ -95,7 +95,7 @@ public partial class EvolutionChainEvolutionDetails
     public NamedApiResource? UsedMove { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
-    public int VersionGroup { get; set; } = default!;
+    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
