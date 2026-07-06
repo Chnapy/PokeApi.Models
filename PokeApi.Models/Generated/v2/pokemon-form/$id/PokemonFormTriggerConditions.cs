@@ -7,14 +7,17 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonCries
+public partial class PokemonFormTriggerConditions
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("latest")]
-    public string Latest { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string? Name { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("legacy")]
-    public string? Legacy { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("trigger")]
+    public string Trigger { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("url")]
+    public string? Url { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

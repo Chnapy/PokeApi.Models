@@ -110,6 +110,7 @@ namespace PokeApi.Models;
 [JsonSerializable(typeof(PokemonFormGenerationViii))]
 [JsonSerializable(typeof(PokemonFormScarletViolet))]
 [JsonSerializable(typeof(PokemonFormSprites))]
+[JsonSerializable(typeof(PokemonFormTriggerConditions))]
 [JsonSerializable(typeof(PokemonFormTypes))]
 [JsonSerializable(typeof(PokemonFormVersions))]
 [JsonSerializable(typeof(PokemonFrontFemale))]

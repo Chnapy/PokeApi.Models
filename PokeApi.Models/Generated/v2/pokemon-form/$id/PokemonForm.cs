@@ -46,6 +46,9 @@ public partial class PokemonForm
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
     public PokemonFormSprites Sprites { get; set; } = new PokemonFormSprites();
 
+    [System.Text.Json.Serialization.JsonPropertyName("trigger_conditions")]
+    public System.Collections.Generic.ICollection<PokemonFormTriggerConditions> TriggerConditions { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTriggerConditions>();
+
     [System.Text.Json.Serialization.JsonPropertyName("types")]
     public System.Collections.Generic.ICollection<PokemonFormTypes> Types { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTypes>();
 
