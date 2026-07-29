@@ -14,7 +14,7 @@ public partial class PokemonEncounters
     public NamedApiResource LocationArea { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("version_details")]
-    public System.Collections.Generic.ICollection<VersionEncounterDetail> VersionDetails { get; set; } = new System.Collections.ObjectModel.Collection<VersionEncounterDetail>();
+    public System.Collections.Generic.ICollection<PokemonEncountersVersionDetails> VersionDetails { get; set; } = new System.Collections.ObjectModel.Collection<PokemonEncountersVersionDetails>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

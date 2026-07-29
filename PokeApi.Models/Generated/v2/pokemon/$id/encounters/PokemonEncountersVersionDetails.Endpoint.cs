@@ -6,18 +6,18 @@
 
 namespace PokeApi.Models;
 
-public partial class VersionEncounterDetail
+public partial class PokemonEncountersVersionDetails
 {
     /// <summary>PokeAPI/api-data file endpoint for this resource.</summary>
-    public const string FileEndpoint = "/api/v2/location-area/$id/index.json";
+    public const string FileEndpoint = "/api/v2/pokemon/$id/encounters/index.json";
     
     /// <summary>PokeAPI/api-data file list endpoint for this resource.</summary>
-    public const string FileEndpointList = "/api/v2/location-area/index.json";
+    public const string FileEndpointList = "";
     
     /// <summary>PokeAPI REST endpoint for this resource.</summary>
     /// <remarks>Replace {id} with a numeric ID or name to fetch a specific resource.</remarks>
-    public const string RestEndpoint = "/api/v2/location-area/{id}/";
+    public const string RestEndpoint = "/api/v2/pokemon/{id}/encounters/";
     
     /// <summary>PokeAPI REST list endpoint for this resource.</summary>
-    public const string RestEndpointList = "/api/v2/location-area/";
+    public const string RestEndpointList = "";
 }

@@ -7,14 +7,8 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class LocationAreaPokemonEncounters
+public partial class PokemonEncountersPokemonDetails
 {
-
-    [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
-    public NamedApiResource Pokemon { get; set; } = new NamedApiResource();
-
-    [System.Text.Json.Serialization.JsonPropertyName("version_details")]
-    public System.Collections.Generic.ICollection<LocationAreaVersionDetails> VersionDetails { get; set; } = new System.Collections.ObjectModel.Collection<LocationAreaVersionDetails>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
