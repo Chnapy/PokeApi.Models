@@ -31,6 +31,9 @@ public partial class PokeApi
     [System.Text.Json.Serialization.JsonPropertyName("contest-type")]
     public string ContestType { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("currency")]
+    public string Currency { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("egg-group")]
     public string EggGroup { get; set; } = default!;
 

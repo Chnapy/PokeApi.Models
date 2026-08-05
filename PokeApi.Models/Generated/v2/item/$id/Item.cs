@@ -19,9 +19,6 @@ public partial class Item
     [System.Text.Json.Serialization.JsonPropertyName("category")]
     public NamedApiResource Category { get; set; } = new NamedApiResource();
 
-    [System.Text.Json.Serialization.JsonPropertyName("cost")]
-    public int Cost { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
     public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
 
@@ -51,6 +48,9 @@ public partial class Item
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("prices")]
+    public System.Collections.Generic.ICollection<ItemPrices> Prices { get; set; } = new System.Collections.ObjectModel.Collection<ItemPrices>();
 
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
     public ItemSprites Sprites { get; set; } = new ItemSprites();
