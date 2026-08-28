@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class LocationArea
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("encounter_method_rates")]
-    public System.Collections.Generic.ICollection<LocationAreaEncounterMethodRates> EncounterMethodRates { get; set; } = new System.Collections.ObjectModel.Collection<LocationAreaEncounterMethodRates>();
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("game_index")]
     public int GameIndex { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("encounter_method_rates")]
+    public System.Collections.Generic.ICollection<LocationAreaEncounterMethodRates> EncounterMethodRates { get; set; } = new System.Collections.ObjectModel.Collection<LocationAreaEncounterMethodRates>();
 
     [System.Text.Json.Serialization.JsonPropertyName("location")]
     public NamedApiResource Location { get; set; } = new NamedApiResource();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

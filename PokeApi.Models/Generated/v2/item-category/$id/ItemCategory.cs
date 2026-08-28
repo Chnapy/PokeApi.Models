@@ -13,11 +13,11 @@ public partial class ItemCategory
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("items")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Items { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("items")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Items { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

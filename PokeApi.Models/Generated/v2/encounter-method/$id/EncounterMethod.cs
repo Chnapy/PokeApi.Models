@@ -16,11 +16,11 @@ public partial class EncounterMethod
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
-
     [System.Text.Json.Serialization.JsonPropertyName("order")]
     public int Order { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("names")]
+    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

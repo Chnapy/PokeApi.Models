@@ -13,20 +13,20 @@ public partial class Language
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("iso3166")]
-    public string Iso3166 { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("official")]
+    public bool Official { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("iso639")]
     public string Iso639 { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("iso3166")]
+    public string Iso3166 { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("official")]
-    public bool Official { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class BerryFlavors
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("flavor")]
-    public NamedApiResource Flavor { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("potency")]
     public int Potency { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("flavor")]
+    public NamedApiResource Flavor { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class SuperContestEffect
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("appeal")]
     public int Appeal { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
     public System.Collections.Generic.ICollection<FlavorText> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<FlavorText>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("moves")]
     public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

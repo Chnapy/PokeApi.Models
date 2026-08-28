@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class MoveCategory
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
-    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("moves")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
+    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("moves")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

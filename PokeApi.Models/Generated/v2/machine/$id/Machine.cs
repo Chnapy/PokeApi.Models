@@ -16,11 +16,11 @@ public partial class Machine
     [System.Text.Json.Serialization.JsonPropertyName("item")]
     public NamedApiResource Item { get; set; } = new NamedApiResource();
 
-    [System.Text.Json.Serialization.JsonPropertyName("move")]
-    public NamedApiResource Move { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("move")]
+    public NamedApiResource Move { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

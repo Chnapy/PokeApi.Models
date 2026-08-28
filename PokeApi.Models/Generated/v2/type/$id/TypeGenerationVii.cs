@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class TypeGenerationVii
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("lets-go-pikachu-lets-go-eevee")]
-    public TypeLetsGoPikachuLetsGoEevee LetsGoPikachuLetsGoEevee { get; set; } = new TypeLetsGoPikachuLetsGoEevee();
-
     [System.Text.Json.Serialization.JsonPropertyName("sun-moon")]
     public TypeSunMoon SunMoon { get; set; } = new TypeSunMoon();
 
     [System.Text.Json.Serialization.JsonPropertyName("ultra-sun-ultra-moon")]
     public TypeUltraSunUltraMoon UltraSunUltraMoon { get; set; } = new TypeUltraSunUltraMoon();
+
+    [System.Text.Json.Serialization.JsonPropertyName("lets-go-pikachu-lets-go-eevee")]
+    public TypeLetsGoPikachuLetsGoEevee LetsGoPikachuLetsGoEevee { get; set; } = new TypeLetsGoPikachuLetsGoEevee();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

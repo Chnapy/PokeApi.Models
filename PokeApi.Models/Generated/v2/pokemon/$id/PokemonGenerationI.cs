@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class PokemonGenerationI
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("red-blue")]
-    public PokemonRedBlue RedBlue { get; set; } = new PokemonRedBlue();
-
     [System.Text.Json.Serialization.JsonPropertyName("yellow")]
     public PokemonYellow Yellow { get; set; } = new PokemonYellow();
+
+    [System.Text.Json.Serialization.JsonPropertyName("red-blue")]
+    public PokemonRedBlue RedBlue { get; set; } = new PokemonRedBlue();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

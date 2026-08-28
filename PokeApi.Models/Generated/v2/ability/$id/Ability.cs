@@ -10,29 +10,29 @@ namespace PokeApi.Models;
 public partial class Ability
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
-    public System.Collections.Generic.ICollection<AbilityEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<AbilityEffectChanges>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
-    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
-    public System.Collections.Generic.ICollection<AbilityFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<AbilityFlavorTextEntries>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("generation")]
-    public NamedApiResource Generation { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("is_main_series")]
-    public bool IsMainSeries { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("is_main_series")]
+    public bool IsMainSeries { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation")]
+    public NamedApiResource Generation { get; set; } = new NamedApiResource();
+
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
+    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
+    public System.Collections.Generic.ICollection<AbilityEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<AbilityEffectChanges>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
+    public System.Collections.Generic.ICollection<AbilityFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<AbilityFlavorTextEntries>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
     public System.Collections.Generic.ICollection<AbilityPokemon> Pokemon { get; set; } = new System.Collections.ObjectModel.Collection<AbilityPokemon>();

@@ -10,35 +10,29 @@ namespace PokeApi.Models;
 public partial class PokemonForm
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("form_name")]
-    public string FormName { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("form_names")]
-    public System.Collections.Generic.ICollection<Name> FormNames { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("form_order")]
-    public int FormOrder { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("is_battle_only")]
-    public bool IsBattleOnly { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("is_default")]
-    public bool IsDefault { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("is_mega")]
-    public bool IsMega { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
-
     [System.Text.Json.Serialization.JsonPropertyName("order")]
     public int Order { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("form_order")]
+    public int FormOrder { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_default")]
+    public bool IsDefault { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_battle_only")]
+    public bool IsBattleOnly { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_mega")]
+    public bool IsMega { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("form_name")]
+    public string FormName { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
     public NamedApiResource Pokemon { get; set; } = new NamedApiResource();
@@ -46,14 +40,23 @@ public partial class PokemonForm
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
     public PokemonFormSprites Sprites { get; set; } = new PokemonFormSprites();
 
-    [System.Text.Json.Serialization.JsonPropertyName("trigger_conditions")]
-    public System.Collections.Generic.ICollection<PokemonFormTriggerConditions> TriggerConditions { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTriggerConditions>();
+    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
+    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("form_names")]
+    public System.Collections.Generic.ICollection<Name> FormNames { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("names")]
+    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("types")]
     public System.Collections.Generic.ICollection<PokemonFormTypes> Types { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTypes>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
-    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+    [System.Text.Json.Serialization.JsonPropertyName("trigger_conditions")]
+    public System.Collections.Generic.ICollection<PokemonFormTriggerConditions> TriggerConditions { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormTriggerConditions>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
+    public System.Collections.Generic.ICollection<PokemonFormFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<PokemonFormFlavorTextEntries>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

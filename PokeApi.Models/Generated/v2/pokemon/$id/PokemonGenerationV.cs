@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonGenerationV
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonIcons Icons { get; set; } = new PokemonIcons();
+
     [System.Text.Json.Serialization.JsonPropertyName("black-white")]
     public PokemonBlackWhite BlackWhite { get; set; } = new PokemonBlackWhite();
 

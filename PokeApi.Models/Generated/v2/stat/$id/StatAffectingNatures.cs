@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class StatAffectingNatures
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
     [System.Text.Json.Serialization.JsonPropertyName("increase")]
     public System.Collections.Generic.ICollection<NamedApiResource> Increase { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

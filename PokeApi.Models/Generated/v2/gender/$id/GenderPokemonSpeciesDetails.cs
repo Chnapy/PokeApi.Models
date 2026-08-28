@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class GenderPokemonSpeciesDetails
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("pokemon_species")]
-    public NamedApiResource PokemonSpecies { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("rate")]
     public int Rate { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("pokemon_species")]
+    public NamedApiResource PokemonSpecies { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

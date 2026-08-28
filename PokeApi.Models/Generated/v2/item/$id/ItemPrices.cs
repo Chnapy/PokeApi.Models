@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class ItemPrices
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("currency")]
-    public NamedApiResource Currency { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("purchase_price")]
     public int? PurchasePrice { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("sell_price")]
     public int? SellPrice { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("currency")]
+    public NamedApiResource Currency { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();

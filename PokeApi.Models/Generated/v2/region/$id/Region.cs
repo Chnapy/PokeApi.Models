@@ -13,14 +13,14 @@ public partial class Region
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("locations")]
     public System.Collections.Generic.ICollection<NamedApiResource> Locations { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("main_generation")]
     public NamedApiResource? MainGeneration { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

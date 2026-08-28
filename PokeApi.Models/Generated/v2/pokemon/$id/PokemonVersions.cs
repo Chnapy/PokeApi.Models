@@ -13,11 +13,11 @@ public partial class PokemonVersions
     [System.Text.Json.Serialization.JsonPropertyName("generation-i")]
     public PokemonGenerationI GenerationI { get; set; } = new PokemonGenerationI();
 
+    [System.Text.Json.Serialization.JsonPropertyName("generation-v")]
+    public PokemonGenerationV GenerationV { get; set; } = new PokemonGenerationV();
+
     [System.Text.Json.Serialization.JsonPropertyName("generation-ii")]
     public PokemonGenerationIi GenerationIi { get; set; } = new PokemonGenerationIi();
-
-    [System.Text.Json.Serialization.JsonPropertyName("generation-iii")]
-    public PokemonGenerationIii GenerationIii { get; set; } = new PokemonGenerationIii();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation-iv")]
     public PokemonGenerationIv GenerationIv { get; set; } = new PokemonGenerationIv();
@@ -25,11 +25,11 @@ public partial class PokemonVersions
     [System.Text.Json.Serialization.JsonPropertyName("generation-ix")]
     public PokemonGenerationIx GenerationIx { get; set; } = new PokemonGenerationIx();
 
-    [System.Text.Json.Serialization.JsonPropertyName("generation-v")]
-    public PokemonGenerationV GenerationV { get; set; } = new PokemonGenerationV();
-
     [System.Text.Json.Serialization.JsonPropertyName("generation-vi")]
     public PokemonGenerationVi GenerationVi { get; set; } = new PokemonGenerationVi();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-iii")]
+    public PokemonGenerationIii GenerationIii { get; set; } = new PokemonGenerationIii();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation-vii")]
     public PokemonGenerationVii GenerationVii { get; set; } = new PokemonGenerationVii();

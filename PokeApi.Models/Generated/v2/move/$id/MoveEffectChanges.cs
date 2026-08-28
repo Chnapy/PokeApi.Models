@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class MoveEffectChanges
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
-    public System.Collections.Generic.ICollection<Effect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<Effect>();
-
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
+    public System.Collections.Generic.ICollection<Effect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<Effect>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

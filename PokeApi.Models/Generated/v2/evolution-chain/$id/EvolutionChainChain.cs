@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class EvolutionChainChain
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("evolution_details")]
-    public System.Collections.Generic.ICollection<object> EvolutionDetails { get; set; } = new System.Collections.ObjectModel.Collection<object>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("evolves_to")]
-    public System.Collections.Generic.ICollection<EvolutionChainEvolvesTo> EvolvesTo { get; set; } = new System.Collections.ObjectModel.Collection<EvolutionChainEvolvesTo>();
-
     [System.Text.Json.Serialization.JsonPropertyName("is_baby")]
     public bool IsBaby { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("species")]
     public NamedApiResource Species { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("evolution_details")]
+    public System.Collections.Generic.ICollection<object> EvolutionDetails { get; set; } = new System.Collections.ObjectModel.Collection<object>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("evolves_to")]
+    public System.Collections.Generic.ICollection<EvolutionChainEvolvesTo> EvolvesTo { get; set; } = new System.Collections.ObjectModel.Collection<EvolutionChainEvolvesTo>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

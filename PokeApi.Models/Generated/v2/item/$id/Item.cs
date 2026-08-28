@@ -10,11 +10,20 @@ namespace PokeApi.Models;
 public partial class Item
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("fling_power")]
+    public int? FlingPower { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("fling_effect")]
+    public NamedApiResource? FlingEffect { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("attributes")]
     public System.Collections.Generic.ICollection<NamedApiResource> Attributes { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_for")]
-    public ApiResource? BabyTriggerFor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("category")]
     public NamedApiResource Category { get; set; } = new NamedApiResource();
@@ -25,35 +34,26 @@ public partial class Item
     [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
     public System.Collections.Generic.ICollection<VersionGroupFlavorText> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<VersionGroupFlavorText>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("fling_effect")]
-    public NamedApiResource? FlingEffect { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("fling_power")]
-    public int? FlingPower { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("game_indices")]
     public System.Collections.Generic.ICollection<GenerationGameIndex> GameIndices { get; set; } = new System.Collections.ObjectModel.Collection<GenerationGameIndex>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("held_by_pokemon")]
-    public System.Collections.Generic.ICollection<ItemHeldByPokemon> HeldByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<ItemHeldByPokemon>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("machines")]
-    public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     [System.Text.Json.Serialization.JsonPropertyName("prices")]
     public System.Collections.Generic.ICollection<ItemPrices> Prices { get; set; } = new System.Collections.ObjectModel.Collection<ItemPrices>();
 
+    [System.Text.Json.Serialization.JsonPropertyName("names")]
+    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("held_by_pokemon")]
+    public System.Collections.Generic.ICollection<ItemHeldByPokemon> HeldByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<ItemHeldByPokemon>();
+
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
     public ItemSprites Sprites { get; set; } = new ItemSprites();
+
+    [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_for")]
+    public ApiResource? BabyTriggerFor { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("machines")]
+    public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

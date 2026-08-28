@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class EvolutionChain
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("baby_trigger_item")]
     public NamedApiResource? BabyTriggerItem { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("chain")]
     public EvolutionChainChain Chain { get; set; } = new EvolutionChainChain();
-
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

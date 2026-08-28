@@ -13,14 +13,14 @@ public partial class PokemonVersionGroupDetails
     [System.Text.Json.Serialization.JsonPropertyName("level_learned_at")]
     public int LevelLearnedAt { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
+    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+
     [System.Text.Json.Serialization.JsonPropertyName("move_learn_method")]
     public NamedApiResource MoveLearnMethod { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("order")]
     public int? Order { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
-    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

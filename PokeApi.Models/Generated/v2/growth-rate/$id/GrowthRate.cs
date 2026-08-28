@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class GrowthRate
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
-    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("formula")]
     public string Formula { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
+    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
 
     [System.Text.Json.Serialization.JsonPropertyName("levels")]
     public System.Collections.Generic.ICollection<GrowthRateLevels> Levels { get; set; } = new System.Collections.ObjectModel.Collection<GrowthRateLevels>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_species")]
     public System.Collections.Generic.ICollection<NamedApiResource> PokemonSpecies { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class BerryFlavor
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("berries")]
-    public System.Collections.Generic.ICollection<BerryFlavorBerries> Berries { get; set; } = new System.Collections.ObjectModel.Collection<BerryFlavorBerries>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
-    public NamedApiResource ContestType { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("berries")]
+    public System.Collections.Generic.ICollection<BerryFlavorBerries> Berries { get; set; } = new System.Collections.ObjectModel.Collection<BerryFlavorBerries>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
+    public NamedApiResource ContestType { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

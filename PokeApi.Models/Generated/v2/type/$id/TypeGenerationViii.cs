@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class TypeGenerationViii
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
-    public TypeBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new TypeBrilliantDiamondShiningPearl();
+    [System.Text.Json.Serialization.JsonPropertyName("sword-shield")]
+    public TypeSwordShield SwordShield { get; set; } = new TypeSwordShield();
 
     [System.Text.Json.Serialization.JsonPropertyName("legends-arceus")]
     public TypeLegendsArceus LegendsArceus { get; set; } = new TypeLegendsArceus();
 
-    [System.Text.Json.Serialization.JsonPropertyName("sword-shield")]
-    public TypeSwordShield SwordShield { get; set; } = new TypeSwordShield();
+    [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
+    public TypeBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new TypeBrilliantDiamondShiningPearl();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

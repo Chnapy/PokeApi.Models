@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class PokemonPastAbilities
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("abilities")]
-    public System.Collections.Generic.ICollection<PokemonAbilities> Abilities { get; set; } = new System.Collections.ObjectModel.Collection<PokemonAbilities>();
-
     [System.Text.Json.Serialization.JsonPropertyName("generation")]
     public NamedApiResource Generation { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("abilities")]
+    public System.Collections.Generic.ICollection<PokemonAbilities> Abilities { get; set; } = new System.Collections.ObjectModel.Collection<PokemonAbilities>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

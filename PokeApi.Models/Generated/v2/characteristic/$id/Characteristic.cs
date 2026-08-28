@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class Characteristic
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
-    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("gene_modulo")]
     public int GeneModulo { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("possible_values")]
+    public System.Collections.Generic.ICollection<int> PossibleValues { get; set; } = new System.Collections.ObjectModel.Collection<int>();
+
     [System.Text.Json.Serialization.JsonPropertyName("highest_stat")]
     public NamedApiResource HighestStat { get; set; } = new NamedApiResource();
 
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("possible_values")]
-    public System.Collections.Generic.ICollection<int> PossibleValues { get; set; } = new System.Collections.ObjectModel.Collection<int>();
+    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
+    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

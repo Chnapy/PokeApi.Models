@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class PokemonGenerationViii
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
-    public PokemonBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new PokemonBrilliantDiamondShiningPearl();
-
     [System.Text.Json.Serialization.JsonPropertyName("icons")]
     public PokemonIcons Icons { get; set; } = new PokemonIcons();
+
+    [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
+    public PokemonBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new PokemonBrilliantDiamondShiningPearl();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

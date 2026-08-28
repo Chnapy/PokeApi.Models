@@ -13,26 +13,26 @@ public partial class PokemonBlackWhite
     [System.Text.Json.Serialization.JsonPropertyName("animated")]
     public PokemonAnimated Animated { get; set; } = new PokemonAnimated();
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
-    public string? BackDefault { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
+    public string? BackShiny { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("back_female")]
     public string? BackFemale { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
-    public string? BackShiny { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
+    public string? FrontShiny { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_female")]
-    public string? BackShinyFemale { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public string? FrontDefault { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
+    public string? BackDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_female")]
     public string? FrontFemale { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
-    public string? FrontShiny { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
+    public string? FrontDefault { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_female")]
+    public string? BackShinyFemale { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny_female")]
     public string? FrontShinyFemale { get; set; } = default!;

@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class Nature
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("decreased_stat")]
-    public NamedApiResource? DecreasedStat { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("hates_flavor")]
-    public NamedApiResource? HatesFlavor { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("decreased_stat")]
+    public NamedApiResource? DecreasedStat { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("increased_stat")]
     public NamedApiResource? IncreasedStat { get; set; } = default!;
@@ -25,17 +25,17 @@ public partial class Nature
     [System.Text.Json.Serialization.JsonPropertyName("likes_flavor")]
     public NamedApiResource? LikesFlavor { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("move_battle_style_preferences")]
-    public System.Collections.Generic.ICollection<NatureMoveBattleStylePreferences> MoveBattleStylePreferences { get; set; } = new System.Collections.ObjectModel.Collection<NatureMoveBattleStylePreferences>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+    [System.Text.Json.Serialization.JsonPropertyName("hates_flavor")]
+    public NamedApiResource? HatesFlavor { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pokeathlon_stat_changes")]
     public System.Collections.Generic.ICollection<NaturePokeathlonStatChanges> PokeathlonStatChanges { get; set; } = new System.Collections.ObjectModel.Collection<NaturePokeathlonStatChanges>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("move_battle_style_preferences")]
+    public System.Collections.Generic.ICollection<NatureMoveBattleStylePreferences> MoveBattleStylePreferences { get; set; } = new System.Collections.ObjectModel.Collection<NatureMoveBattleStylePreferences>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("names")]
+    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

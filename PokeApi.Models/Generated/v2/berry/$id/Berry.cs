@@ -10,32 +10,20 @@ namespace PokeApi.Models;
 public partial class Berry
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("firmness")]
-    public NamedApiResource? Firmness { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("flavors")]
-    public System.Collections.Generic.ICollection<BerryFlavors> Flavors { get; set; } = new System.Collections.ObjectModel.Collection<BerryFlavors>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("growth_time")]
-    public int? GrowthTime { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("item")]
-    public NamedApiResource Item { get; set; } = new NamedApiResource();
-
-    [System.Text.Json.Serialization.JsonPropertyName("max_harvest")]
-    public int? MaxHarvest { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("growth_time")]
+    public int? GrowthTime { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("max_harvest")]
+    public int? MaxHarvest { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("natural_gift_power")]
     public int? NaturalGiftPower { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("natural_gift_type")]
-    public NamedApiResource? NaturalGiftType { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("size")]
     public int? Size { get; set; } = default!;
@@ -45,6 +33,18 @@ public partial class Berry
 
     [System.Text.Json.Serialization.JsonPropertyName("soil_dryness")]
     public int? SoilDryness { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("firmness")]
+    public NamedApiResource? Firmness { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("flavors")]
+    public System.Collections.Generic.ICollection<BerryFlavors> Flavors { get; set; } = new System.Collections.ObjectModel.Collection<BerryFlavors>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("item")]
+    public NamedApiResource Item { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("natural_gift_type")]
+    public NamedApiResource? NaturalGiftType { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

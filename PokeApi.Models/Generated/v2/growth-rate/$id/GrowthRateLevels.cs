@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class GrowthRateLevels
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("experience")]
-    public int Experience { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("level")]
     public int Level { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("experience")]
+    public int Experience { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -10,65 +10,56 @@ namespace PokeApi.Models;
 public partial class Move
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("accuracy")]
-    public int? Accuracy { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("contest_combos")]
-    public MoveContestCombos? ContestCombos { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("contest_effect")]
-    public ApiResource? ContestEffect { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
-    public NamedApiResource? ContestType { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("damage_class")]
-    public NamedApiResource DamageClass { get; set; } = new NamedApiResource();
-
-    [System.Text.Json.Serialization.JsonPropertyName("effect_chance")]
-    public int? EffectChance { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
-    public System.Collections.Generic.ICollection<MoveEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveEffectChanges>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
-    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
-    public System.Collections.Generic.ICollection<MoveFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<MoveFlavorTextEntries>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("generation")]
-    public NamedApiResource Generation { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("learned_by_pokemon")]
-    public System.Collections.Generic.ICollection<NamedApiResource> LearnedByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("machines")]
-    public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("meta")]
-    public MoveMeta? Meta { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("names")]
-    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+    [System.Text.Json.Serialization.JsonPropertyName("accuracy")]
+    public int? Accuracy { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("past_values")]
-    public System.Collections.Generic.ICollection<MovePastValues> PastValues { get; set; } = new System.Collections.ObjectModel.Collection<MovePastValues>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("power")]
-    public int? Power { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("effect_chance")]
+    public int? EffectChance { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pp")]
     public int? Pp { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("priority")]
     public int Priority { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("power")]
+    public int? Power { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("contest_combos")]
+    public MoveContestCombos? ContestCombos { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("contest_type")]
+    public NamedApiResource? ContestType { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("contest_effect")]
+    public ApiResource? ContestEffect { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("damage_class")]
+    public NamedApiResource DamageClass { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
+    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_changes")]
+    public System.Collections.Generic.ICollection<MoveEffectChanges> EffectChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveEffectChanges>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation")]
+    public NamedApiResource Generation { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("meta")]
+    public MoveMeta? Meta { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("names")]
+    public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("past_values")]
+    public System.Collections.Generic.ICollection<MovePastValues> PastValues { get; set; } = new System.Collections.ObjectModel.Collection<MovePastValues>();
 
     [System.Text.Json.Serialization.JsonPropertyName("stat_changes")]
     public System.Collections.Generic.ICollection<MoveStatChanges> StatChanges { get; set; } = new System.Collections.ObjectModel.Collection<MoveStatChanges>();
@@ -81,6 +72,15 @@ public partial class Move
 
     [System.Text.Json.Serialization.JsonPropertyName("type")]
     public NamedApiResource Type { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("machines")]
+    public System.Collections.Generic.ICollection<MachineVersionDetail> Machines { get; set; } = new System.Collections.ObjectModel.Collection<MachineVersionDetail>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("flavor_text_entries")]
+    public System.Collections.Generic.ICollection<MoveFlavorTextEntries> FlavorTextEntries { get; set; } = new System.Collections.ObjectModel.Collection<MoveFlavorTextEntries>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("learned_by_pokemon")]
+    public System.Collections.Generic.ICollection<NamedApiResource> LearnedByPokemon { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

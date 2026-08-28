@@ -7,14 +7,17 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class TypePastDamageRelations
+public partial class PokemonFormFlavorTextEntries
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("generation")]
-    public NamedApiResource Generation { get; set; } = new NamedApiResource();
+    [System.Text.Json.Serialization.JsonPropertyName("flavor_text")]
+    public string FlavorText { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("damage_relations")]
-    public TypeDamageRelations DamageRelations { get; set; } = new TypeDamageRelations();
+    [System.Text.Json.Serialization.JsonPropertyName("language")]
+    public NamedApiResource Language { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("version")]
+    public NamedApiResource Version { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

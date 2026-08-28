@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class ContestTypeNames
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("color")]
     public string Color { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("language")]
     public NamedApiResource Language { get; set; } = new NamedApiResource();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

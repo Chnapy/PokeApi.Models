@@ -13,11 +13,11 @@ public partial class PokemonGenerationIii
     [System.Text.Json.Serialization.JsonPropertyName("emerald")]
     public PokemonEmerald Emerald { get; set; } = new PokemonEmerald();
 
-    [System.Text.Json.Serialization.JsonPropertyName("firered-leafgreen")]
-    public PokemonFireredLeafgreen FireredLeafgreen { get; set; } = new PokemonFireredLeafgreen();
-
     [System.Text.Json.Serialization.JsonPropertyName("ruby-sapphire")]
     public PokemonRubySapphire RubySapphire { get; set; } = new PokemonRubySapphire();
+
+    [System.Text.Json.Serialization.JsonPropertyName("firered-leafgreen")]
+    public PokemonFireredLeafgreen FireredLeafgreen { get; set; } = new PokemonFireredLeafgreen();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

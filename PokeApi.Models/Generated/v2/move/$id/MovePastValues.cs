@@ -13,17 +13,17 @@ public partial class MovePastValues
     [System.Text.Json.Serialization.JsonPropertyName("accuracy")]
     public int? Accuracy { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("effect_chance")]
-    public int? EffectChance { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
-    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
-
     [System.Text.Json.Serialization.JsonPropertyName("power")]
     public int? Power { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("pp")]
     public int? Pp { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_chance")]
+    public int? EffectChance { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
+    public System.Collections.Generic.ICollection<VerboseEffect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<VerboseEffect>();
 
     [System.Text.Json.Serialization.JsonPropertyName("type")]
     public NamedApiResource? Type { get; set; } = default!;

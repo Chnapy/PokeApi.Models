@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class LocationAreaEncounterDetails
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("chance")]
-    public int Chance { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("condition_values")]
-    public System.Collections.Generic.ICollection<NamedApiResource> ConditionValues { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+    [System.Text.Json.Serialization.JsonPropertyName("min_level")]
+    public int MinLevel { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("max_level")]
     public int MaxLevel { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("chance")]
+    public int Chance { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("method")]
     public NamedApiResource Method { get; set; } = new NamedApiResource();
 
-    [System.Text.Json.Serialization.JsonPropertyName("min_level")]
-    public int MinLevel { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("condition_values")]
+    public System.Collections.Generic.ICollection<NamedApiResource> ConditionValues { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokemon_details")]
     public LocationAreaPokemonDetails? PokemonDetails { get; set; } = default!;

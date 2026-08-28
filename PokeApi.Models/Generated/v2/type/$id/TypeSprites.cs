@@ -10,8 +10,8 @@ namespace PokeApi.Models;
 public partial class TypeSprites
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("generation-iii")]
-    public TypeGenerationIii GenerationIii { get; set; } = new TypeGenerationIii();
+    [System.Text.Json.Serialization.JsonPropertyName("generation-v")]
+    public TypeGenerationV GenerationV { get; set; } = new TypeGenerationV();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation-iv")]
     public TypeGenerationIv GenerationIv { get; set; } = new TypeGenerationIv();
@@ -19,11 +19,11 @@ public partial class TypeSprites
     [System.Text.Json.Serialization.JsonPropertyName("generation-ix")]
     public TypeGenerationIx GenerationIx { get; set; } = new TypeGenerationIx();
 
-    [System.Text.Json.Serialization.JsonPropertyName("generation-v")]
-    public TypeGenerationV GenerationV { get; set; } = new TypeGenerationV();
-
     [System.Text.Json.Serialization.JsonPropertyName("generation-vi")]
     public TypeGenerationVi GenerationVi { get; set; } = new TypeGenerationVi();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-iii")]
+    public TypeGenerationIii GenerationIii { get; set; } = new TypeGenerationIii();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation-vii")]
     public TypeGenerationVii GenerationVii { get; set; } = new TypeGenerationVii();

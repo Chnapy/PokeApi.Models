@@ -10,8 +10,17 @@ namespace PokeApi.Models;
 public partial class Stat
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("affecting_items")]
-    public System.Collections.Generic.ICollection<NamedApiResource> AffectingItems { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("game_index")]
+    public int GameIndex { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_battle_only")]
+    public bool IsBattleOnly { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("affecting_moves")]
     public StatAffectingMoves AffectingMoves { get; set; } = new StatAffectingMoves();
@@ -19,23 +28,14 @@ public partial class Stat
     [System.Text.Json.Serialization.JsonPropertyName("affecting_natures")]
     public StatAffectingNatures AffectingNatures { get; set; } = new StatAffectingNatures();
 
+    [System.Text.Json.Serialization.JsonPropertyName("affecting_items")]
+    public System.Collections.Generic.ICollection<NamedApiResource> AffectingItems { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+
     [System.Text.Json.Serialization.JsonPropertyName("characteristics")]
     public System.Collections.Generic.ICollection<ApiResource> Characteristics { get; set; } = new System.Collections.ObjectModel.Collection<ApiResource>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("game_index")]
-    public int GameIndex { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("is_battle_only")]
-    public bool IsBattleOnly { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("move_damage_class")]
     public NamedApiResource? MoveDamageClass { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

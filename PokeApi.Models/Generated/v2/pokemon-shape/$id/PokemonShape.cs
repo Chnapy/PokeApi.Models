@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonShape
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("awesome_names")]
-    public System.Collections.Generic.ICollection<PokemonShapeAwesomeNames> AwesomeNames { get; set; } = new System.Collections.ObjectModel.Collection<PokemonShapeAwesomeNames>();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("awesome_names")]
+    public System.Collections.Generic.ICollection<PokemonShapeAwesomeNames> AwesomeNames { get; set; } = new System.Collections.ObjectModel.Collection<PokemonShapeAwesomeNames>();
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();

@@ -10,9 +10,6 @@ namespace PokeApi.Models;
 public partial class MoveLearnMethod
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
-    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
@@ -21,6 +18,9 @@ public partial class MoveLearnMethod
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("descriptions")]
+    public System.Collections.Generic.ICollection<Description> Descriptions { get; set; } = new System.Collections.ObjectModel.Collection<Description>();
 
     [System.Text.Json.Serialization.JsonPropertyName("version_groups")]
     public System.Collections.Generic.ICollection<NamedApiResource> VersionGroups { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

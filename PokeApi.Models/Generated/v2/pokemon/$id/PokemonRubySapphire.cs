@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class PokemonRubySapphire
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
-    public string? BackDefault { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
     public string? BackShiny { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public string? FrontDefault { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
     public string? FrontShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
+    public string? BackDefault { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
+    public string? FrontDefault { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

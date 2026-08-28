@@ -13,11 +13,11 @@ public partial class PalParkAreaPokemonEncounters
     [System.Text.Json.Serialization.JsonPropertyName("base_score")]
     public int BaseScore { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("pokemon_species")]
-    public NamedApiResource PokemonSpecies { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("rate")]
     public int Rate { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("pokemon_species")]
+    public NamedApiResource PokemonSpecies { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

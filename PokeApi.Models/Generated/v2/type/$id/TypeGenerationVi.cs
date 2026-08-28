@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class TypeGenerationVi
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("omega-ruby-alpha-sapphire")]
-    public TypeOmegaRubyAlphaSapphire OmegaRubyAlphaSapphire { get; set; } = new TypeOmegaRubyAlphaSapphire();
-
     [System.Text.Json.Serialization.JsonPropertyName("x-y")]
     public TypeXY XY { get; set; } = new TypeXY();
+
+    [System.Text.Json.Serialization.JsonPropertyName("omega-ruby-alpha-sapphire")]
+    public TypeOmegaRubyAlphaSapphire OmegaRubyAlphaSapphire { get; set; } = new TypeOmegaRubyAlphaSapphire();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

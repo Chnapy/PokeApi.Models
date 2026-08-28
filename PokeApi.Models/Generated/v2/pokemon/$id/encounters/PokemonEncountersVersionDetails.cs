@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonEncountersVersionDetails
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("encounter_details")]
-    public System.Collections.Generic.ICollection<PokemonEncountersEncounterDetails> EncounterDetails { get; set; } = new System.Collections.ObjectModel.Collection<PokemonEncountersEncounterDetails>();
+    [System.Text.Json.Serialization.JsonPropertyName("version")]
+    public NamedApiResource Version { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("max_chance")]
     public int MaxChance { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("version")]
-    public NamedApiResource Version { get; set; } = new NamedApiResource();
+    [System.Text.Json.Serialization.JsonPropertyName("encounter_details")]
+    public System.Collections.Generic.ICollection<PokemonEncountersEncounterDetails> EncounterDetails { get; set; } = new System.Collections.ObjectModel.Collection<PokemonEncountersEncounterDetails>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

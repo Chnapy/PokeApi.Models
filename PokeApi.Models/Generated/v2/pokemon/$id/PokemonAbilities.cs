@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonAbilities
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("ability")]
-    public NamedApiResource Ability { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("is_hidden")]
     public bool IsHidden { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("slot")]
     public int Slot { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("ability")]
+    public NamedApiResource Ability { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

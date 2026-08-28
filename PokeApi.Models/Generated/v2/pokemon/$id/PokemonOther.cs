@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class PokemonOther
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("dream_world")]
-    public PokemonDreamWorld DreamWorld { get; set; } = new PokemonDreamWorld();
-
     [System.Text.Json.Serialization.JsonPropertyName("home")]
     public PokemonHome Home { get; set; } = new PokemonHome();
 
-    [System.Text.Json.Serialization.JsonPropertyName("official-artwork")]
-    public PokemonOfficialArtwork OfficialArtwork { get; set; } = new PokemonOfficialArtwork();
-
     [System.Text.Json.Serialization.JsonPropertyName("showdown")]
     public PokemonShowdown Showdown { get; set; } = new PokemonShowdown();
+
+    [System.Text.Json.Serialization.JsonPropertyName("dream_world")]
+    public PokemonDreamWorld DreamWorld { get; set; } = new PokemonDreamWorld();
+
+    [System.Text.Json.Serialization.JsonPropertyName("official-artwork")]
+    public PokemonOfficialArtwork OfficialArtwork { get; set; } = new PokemonOfficialArtwork();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

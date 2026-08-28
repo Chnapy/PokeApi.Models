@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class PokeathlonStatAffectingNatures
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
-    public System.Collections.Generic.ICollection<PokeathlonStatDecrease> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<PokeathlonStatDecrease>();
-
     [System.Text.Json.Serialization.JsonPropertyName("increase")]
     public System.Collections.Generic.ICollection<PokeathlonStatIncrease> Increase { get; set; } = new System.Collections.ObjectModel.Collection<PokeathlonStatIncrease>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
+    public System.Collections.Generic.ICollection<PokeathlonStatDecrease> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<PokeathlonStatDecrease>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

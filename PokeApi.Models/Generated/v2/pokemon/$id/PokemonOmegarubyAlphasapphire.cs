@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonOmegarubyAlphasapphire
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public string? FrontDefault { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
+    public string? FrontShiny { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_female")]
     public string? FrontFemale { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
-    public string? FrontShiny { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
+    public string? FrontDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny_female")]
     public string? FrontShinyFemale { get; set; } = default!;

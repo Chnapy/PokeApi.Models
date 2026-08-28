@@ -10,8 +10,17 @@ namespace PokeApi.Models;
 public partial class Type
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("id")]
+    public int Id { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("name")]
+    public string Name { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("damage_relations")]
     public TypeDamageRelations DamageRelations { get; set; } = new TypeDamageRelations();
+
+    [System.Text.Json.Serialization.JsonPropertyName("past_damage_relations")]
+    public System.Collections.Generic.ICollection<TypePastDamageRelations> PastDamageRelations { get; set; } = new System.Collections.ObjectModel.Collection<TypePastDamageRelations>();
 
     [System.Text.Json.Serialization.JsonPropertyName("game_indices")]
     public System.Collections.Generic.ICollection<GenerationGameIndex> GameIndices { get; set; } = new System.Collections.ObjectModel.Collection<GenerationGameIndex>();
@@ -19,26 +28,17 @@ public partial class Type
     [System.Text.Json.Serialization.JsonPropertyName("generation")]
     public NamedApiResource Generation { get; set; } = new NamedApiResource();
 
-    [System.Text.Json.Serialization.JsonPropertyName("id")]
-    public int Id { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("move_damage_class")]
     public NamedApiResource? MoveDamageClass { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("moves")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("name")]
-    public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("past_damage_relations")]
-    public System.Collections.Generic.ICollection<TypePastDamageRelations> PastDamageRelations { get; set; } = new System.Collections.ObjectModel.Collection<TypePastDamageRelations>();
-
     [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
     public System.Collections.Generic.ICollection<TypePokemon> Pokemon { get; set; } = new System.Collections.ObjectModel.Collection<TypePokemon>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("moves")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Moves { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("sprites")]
     public TypeSprites Sprites { get; set; } = new TypeSprites();

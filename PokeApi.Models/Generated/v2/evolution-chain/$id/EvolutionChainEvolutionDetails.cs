@@ -10,23 +10,23 @@ namespace PokeApi.Models;
 public partial class EvolutionChainEvolutionDetails
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("base_form")]
-    public NamedApiResource? BaseForm { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("evolved_form")]
-    public NamedApiResource? EvolvedForm { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("gender")]
-    public int? Gender { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("held_item")]
-    public NamedApiResource? HeldItem { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
+    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("is_default")]
     public bool IsDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("item")]
     public NamedApiResource? Item { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("trigger")]
+    public NamedApiResource Trigger { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("gender")]
+    public int? Gender { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("held_item")]
+    public NamedApiResource? HeldItem { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("known_move")]
     public NamedApiResource? KnownMove { get; set; } = default!;
@@ -37,26 +37,17 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("location")]
     public NamedApiResource? Location { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("min_affection")]
-    public int? MinAffection { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("min_beauty")]
-    public int? MinBeauty { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("min_damage_taken")]
-    public int? MinDamageTaken { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("min_level")]
+    public int? MinLevel { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("min_happiness")]
     public int? MinHappiness { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("min_level")]
-    public int? MinLevel { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("min_beauty")]
+    public int? MinBeauty { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("min_move_count")]
-    public int? MinMoveCount { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("min_steps")]
-    public int? MinSteps { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("min_affection")]
+    public int? MinAffection { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("near_special_rock")]
     public bool NearSpecialRock { get; set; } = default!;
@@ -73,9 +64,6 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("party_type")]
     public NamedApiResource? PartyType { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public NamedApiResource? Region { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("relative_physical_stats")]
     public int? RelativePhysicalStats { get; set; } = default!;
 
@@ -85,17 +73,29 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("trade_species")]
     public NamedApiResource? TradeSpecies { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("trigger")]
-    public NamedApiResource Trigger { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("turn_upside_down")]
     public bool TurnUpsideDown { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("region")]
+    public NamedApiResource? Region { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("base_form")]
+    public NamedApiResource? BaseForm { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("evolved_form")]
+    public NamedApiResource? EvolvedForm { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("used_move")]
     public NamedApiResource? UsedMove { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("version_group")]
-    public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
+    [System.Text.Json.Serialization.JsonPropertyName("min_move_count")]
+    public int? MinMoveCount { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("min_steps")]
+    public int? MinSteps { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("min_damage_taken")]
+    public int? MinDamageTaken { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

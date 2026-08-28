@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class VersionGroup
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("generation")]
-    public NamedApiResource Generation { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("move_learn_methods")]
-    public System.Collections.Generic.ICollection<NamedApiResource> MoveLearnMethods { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("order")]
     public int Order { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation")]
+    public NamedApiResource Generation { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("move_learn_methods")]
+    public System.Collections.Generic.ICollection<NamedApiResource> MoveLearnMethods { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("pokedexes")]
     public System.Collections.Generic.ICollection<NamedApiResource> Pokedexes { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();

@@ -112,6 +112,7 @@ namespace PokeApi.Models;
 [JsonSerializable(typeof(PokemonFireredLeafgreen))]
 [JsonSerializable(typeof(PokemonForm))]
 [JsonSerializable(typeof(PokemonFormBrilliantDiamondShiningPearl))]
+[JsonSerializable(typeof(PokemonFormFlavorTextEntries))]
 [JsonSerializable(typeof(PokemonFormFrontFemale))]
 [JsonSerializable(typeof(PokemonFormGenerationIx))]
 [JsonSerializable(typeof(PokemonFormGenerationViii))]

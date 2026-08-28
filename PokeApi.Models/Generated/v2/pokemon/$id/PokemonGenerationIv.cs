@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonGenerationIv
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("platinum")]
+    public PokemonPlatinum Platinum { get; set; } = new PokemonPlatinum();
+
     [System.Text.Json.Serialization.JsonPropertyName("diamond-pearl")]
     public PokemonDiamondPearl DiamondPearl { get; set; } = new PokemonDiamondPearl();
 
     [System.Text.Json.Serialization.JsonPropertyName("heartgold-soulsilver")]
     public PokemonHeartgoldSoulsilver HeartgoldSoulsilver { get; set; } = new PokemonHeartgoldSoulsilver();
-
-    [System.Text.Json.Serialization.JsonPropertyName("platinum")]
-    public PokemonPlatinum Platinum { get; set; } = new PokemonPlatinum();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -10,23 +10,23 @@ namespace PokeApi.Models;
 public partial class TypeDamageRelations
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("double_damage_from")]
-    public System.Collections.Generic.ICollection<NamedApiResource> DoubleDamageFrom { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("double_damage_to")]
-    public System.Collections.Generic.ICollection<NamedApiResource> DoubleDamageTo { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("half_damage_from")]
-    public System.Collections.Generic.ICollection<NamedApiResource> HalfDamageFrom { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+    [System.Text.Json.Serialization.JsonPropertyName("no_damage_to")]
+    public System.Collections.Generic.ICollection<NamedApiResource> NoDamageTo { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     [System.Text.Json.Serialization.JsonPropertyName("half_damage_to")]
     public System.Collections.Generic.ICollection<NamedApiResource> HalfDamageTo { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
+    [System.Text.Json.Serialization.JsonPropertyName("double_damage_to")]
+    public System.Collections.Generic.ICollection<NamedApiResource> DoubleDamageTo { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+
     [System.Text.Json.Serialization.JsonPropertyName("no_damage_from")]
     public System.Collections.Generic.ICollection<NamedApiResource> NoDamageFrom { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("no_damage_to")]
-    public System.Collections.Generic.ICollection<NamedApiResource> NoDamageTo { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+    [System.Text.Json.Serialization.JsonPropertyName("half_damage_from")]
+    public System.Collections.Generic.ICollection<NamedApiResource> HalfDamageFrom { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("double_damage_from")]
+    public System.Collections.Generic.ICollection<NamedApiResource> DoubleDamageFrom { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

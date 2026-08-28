@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class StatAffectingMoves
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
-    public System.Collections.Generic.ICollection<StatDecrease> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<StatDecrease>();
-
     [System.Text.Json.Serialization.JsonPropertyName("increase")]
     public System.Collections.Generic.ICollection<StatIncrease> Increase { get; set; } = new System.Collections.ObjectModel.Collection<StatIncrease>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("decrease")]
+    public System.Collections.Generic.ICollection<StatDecrease> Decrease { get; set; } = new System.Collections.ObjectModel.Collection<StatDecrease>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

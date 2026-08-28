@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class TypePokemon
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
-    public NamedApiResource Pokemon { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("slot")]
     public int Slot { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("pokemon")]
+    public NamedApiResource Pokemon { get; set; } = new NamedApiResource();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

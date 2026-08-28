@@ -10,23 +10,23 @@ namespace PokeApi.Models;
 public partial class Location
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("areas")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Areas { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
-    [System.Text.Json.Serialization.JsonPropertyName("game_indices")]
-    public System.Collections.Generic.ICollection<GenerationGameIndex> GameIndices { get; set; } = new System.Collections.ObjectModel.Collection<GenerationGameIndex>();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("region")]
+    public NamedApiResource? Region { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<Name> Names { get; set; } = new System.Collections.ObjectModel.Collection<Name>();
 
-    [System.Text.Json.Serialization.JsonPropertyName("region")]
-    public NamedApiResource? Region { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("game_indices")]
+    public System.Collections.Generic.ICollection<GenerationGameIndex> GameIndices { get; set; } = new System.Collections.ObjectModel.Collection<GenerationGameIndex>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("areas")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Areas { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

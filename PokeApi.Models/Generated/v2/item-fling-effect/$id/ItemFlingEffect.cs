@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class ItemFlingEffect
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
-    public System.Collections.Generic.ICollection<Effect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<Effect>();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("items")]
-    public System.Collections.Generic.ICollection<NamedApiResource> Items { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
-
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("effect_entries")]
+    public System.Collections.Generic.ICollection<Effect> EffectEntries { get; set; } = new System.Collections.ObjectModel.Collection<Effect>();
+
+    [System.Text.Json.Serialization.JsonPropertyName("items")]
+    public System.Collections.Generic.ICollection<NamedApiResource> Items { get; set; } = new System.Collections.ObjectModel.Collection<NamedApiResource>();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

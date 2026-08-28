@@ -10,14 +10,14 @@ namespace PokeApi.Models;
 public partial class ContestType
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("berry_flavor")]
-    public NamedApiResource BerryFlavor { get; set; } = new NamedApiResource();
-
     [System.Text.Json.Serialization.JsonPropertyName("id")]
     public int Id { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string Name { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("berry_flavor")]
+    public NamedApiResource BerryFlavor { get; set; } = new NamedApiResource();
 
     [System.Text.Json.Serialization.JsonPropertyName("names")]
     public System.Collections.Generic.ICollection<ContestTypeNames> Names { get; set; } = new System.Collections.ObjectModel.Collection<ContestTypeNames>();

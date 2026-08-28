@@ -10,20 +10,20 @@ namespace PokeApi.Models;
 public partial class TypeGenerationIii
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("colosseum")]
-    public TypeColosseum Colosseum { get; set; } = new TypeColosseum();
+    [System.Text.Json.Serialization.JsonPropertyName("xd")]
+    public TypeXd Xd { get; set; } = new TypeXd();
 
     [System.Text.Json.Serialization.JsonPropertyName("emerald")]
     public TypeEmerald Emerald { get; set; } = new TypeEmerald();
 
-    [System.Text.Json.Serialization.JsonPropertyName("firered-leafgreen")]
-    public TypeFireredLeafgreen FireredLeafgreen { get; set; } = new TypeFireredLeafgreen();
+    [System.Text.Json.Serialization.JsonPropertyName("colosseum")]
+    public TypeColosseum Colosseum { get; set; } = new TypeColosseum();
 
     [System.Text.Json.Serialization.JsonPropertyName("ruby-sapphire")]
     public TypeRubySapphire RubySapphire { get; set; } = new TypeRubySapphire();
 
-    [System.Text.Json.Serialization.JsonPropertyName("xd")]
-    public TypeXd Xd { get; set; } = new TypeXd();
+    [System.Text.Json.Serialization.JsonPropertyName("firered-leafgreen")]
+    public TypeFireredLeafgreen FireredLeafgreen { get; set; } = new TypeFireredLeafgreen();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

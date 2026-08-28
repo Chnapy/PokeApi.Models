@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class NatureMoveBattleStylePreferences
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("high_hp_preference")]
-    public int HighHpPreference { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("low_hp_preference")]
     public int LowHpPreference { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("high_hp_preference")]
+    public int HighHpPreference { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("move_battle_style")]
     public NamedApiResource MoveBattleStyle { get; set; } = new NamedApiResource();

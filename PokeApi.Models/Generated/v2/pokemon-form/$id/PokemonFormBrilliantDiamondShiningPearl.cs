@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class PokemonFormBrilliantDiamondShiningPearl
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public string? FrontDefault { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("front_female")]
     public PokemonFormFrontFemale? FrontFemale { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
+    public string? FrontDefault { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

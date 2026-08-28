@@ -10,17 +10,17 @@ namespace PokeApi.Models;
 public partial class PokemonFormTriggerConditions
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("base_form")]
-    public NamedApiResource? BaseForm { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("trigger")]
+    public string Trigger { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("name")]
     public string? Name { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("trigger")]
-    public string Trigger { get; set; } = default!;
-
     [System.Text.Json.Serialization.JsonPropertyName("url")]
     public string? Url { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("base_form")]
+    public NamedApiResource? BaseForm { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

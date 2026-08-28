@@ -10,29 +10,32 @@ namespace PokeApi.Models;
 public partial class PokemonCrystal
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
-    public string? BackDefault { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("animated")]
+    public PokemonAnimated Animated { get; set; } = new PokemonAnimated();
 
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
     public string? BackShiny { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_transparent")]
-    public string? BackShinyTransparent { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
+    public string? FrontShiny { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("back_transparent")]
-    public string? BackTransparent { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
+    public string? BackDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
     public string? FrontDefault { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
-    public string? FrontShiny { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny_transparent")]
-    public string? FrontShinyTransparent { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("back_transparent")]
+    public string? BackTransparent { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_transparent")]
     public string? FrontTransparent { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_transparent")]
+    public string? BackShinyTransparent { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny_transparent")]
+    public string? FrontShinyTransparent { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

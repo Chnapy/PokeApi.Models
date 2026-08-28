@@ -10,11 +10,11 @@ namespace PokeApi.Models;
 public partial class TypeGenerationV
 {
 
-    [System.Text.Json.Serialization.JsonPropertyName("black-2-white-2")]
-    public TypeBlack2White2 Black2White2 { get; set; } = new TypeBlack2White2();
-
     [System.Text.Json.Serialization.JsonPropertyName("black-white")]
     public TypeBlackWhite BlackWhite { get; set; } = new TypeBlackWhite();
+
+    [System.Text.Json.Serialization.JsonPropertyName("black-2-white-2")]
+    public TypeBlack2White2 Black2White2 { get; set; } = new TypeBlack2White2();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
