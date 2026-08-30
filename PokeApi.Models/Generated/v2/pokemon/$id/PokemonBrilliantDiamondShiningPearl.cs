@@ -11,7 +11,7 @@ public partial class PokemonBrilliantDiamondShiningPearl
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("front_female")]
-    public PokemonFrontFemale? FrontFemale { get; set; } = default!;
+    public string? FrontFemale { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
     public string? FrontDefault { get; set; } = default!;

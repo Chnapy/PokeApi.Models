@@ -29,7 +29,7 @@ public partial class PokemonShowdown
     public string? FrontDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny_female")]
-    public PokemonBackShinyFemale? BackShinyFemale { get; set; } = default!;
+    public string? BackShinyFemale { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny_female")]
     public string? FrontShinyFemale { get; set; } = default!;
