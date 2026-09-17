@@ -52,6 +52,9 @@ public partial class PokeApi
     [System.Text.Json.Serialization.JsonPropertyName("evolution-trigger")]
     public string EvolutionTrigger { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("evolution-variable")]
+    public string EvolutionVariable { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("gender")]
     public string Gender { get; set; } = default!;
 

@@ -79,11 +79,11 @@ public partial class EvolutionChainEvolutionDetails
     [System.Text.Json.Serialization.JsonPropertyName("region")]
     public NamedApiResource? Region { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("base_form")]
-    public NamedApiResource? BaseForm { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("required_pokemon_form")]
+    public NamedApiResource? RequiredPokemonForm { get; set; } = default!;
 
-    [System.Text.Json.Serialization.JsonPropertyName("evolved_form")]
-    public NamedApiResource? EvolvedForm { get; set; } = default!;
+    [System.Text.Json.Serialization.JsonPropertyName("evolved_pokemon_form")]
+    public NamedApiResource? EvolvedPokemonForm { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("used_move")]
     public NamedApiResource? UsedMove { get; set; } = default!;
@@ -96,6 +96,12 @@ public partial class EvolutionChainEvolutionDetails
 
     [System.Text.Json.Serialization.JsonPropertyName("min_damage_taken")]
     public int? MinDamageTaken { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("allowed_natures")]
+    public EvolutionChainAllowedNatures? AllowedNatures { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("condition_expression")]
+    public EvolutionChainConditionExpression? ConditionExpression { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
