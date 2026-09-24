@@ -7,20 +7,8 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonUltraSunUltraMoon
+public partial class PokemonFrontShinyFemale
 {
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
-    public PokemonFrontShiny? FrontShiny { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_female")]
-    public PokemonFrontFemale? FrontFemale { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public PokemonFrontDefault? FrontDefault { get; set; } = default!;
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_shiny_female")]
-    public PokemonFrontShinyFemale? FrontShinyFemale { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
