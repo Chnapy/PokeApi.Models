@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonFormGenerationIx
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("champions")]
+    public PokemonFormChampions Champions { get; set; } = new PokemonFormChampions();
+
     [System.Text.Json.Serialization.JsonPropertyName("scarlet-violet")]
     public PokemonFormScarletViolet ScarletViolet { get; set; } = new PokemonFormScarletViolet();
 

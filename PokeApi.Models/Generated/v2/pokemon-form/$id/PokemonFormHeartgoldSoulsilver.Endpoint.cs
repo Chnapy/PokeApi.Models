@@ -6,18 +6,18 @@
 
 namespace PokeApi.Models;
 
-public partial class PokemonFrontFemale
+public partial class PokemonFormHeartgoldSoulsilver
 {
     /// <summary>PokeAPI/api-data file endpoint for this resource.</summary>
-    public const string FileEndpoint = "/api/v2/pokemon/$id/index.json";
+    public const string FileEndpoint = "/api/v2/pokemon-form/$id/index.json";
     
     /// <summary>PokeAPI/api-data file list endpoint for this resource.</summary>
-    public const string FileEndpointList = "/api/v2/pokemon/index.json";
+    public const string FileEndpointList = "/api/v2/pokemon-form/index.json";
     
     /// <summary>PokeAPI REST endpoint for this resource.</summary>
     /// <remarks>Replace {id} with a numeric ID or name to fetch a specific resource.</remarks>
-    public const string RestEndpoint = "/api/v2/pokemon/{id}/";
+    public const string RestEndpoint = "/api/v2/pokemon-form/{id}/";
     
     /// <summary>PokeAPI REST list endpoint for this resource.</summary>
-    public const string RestEndpointList = "/api/v2/pokemon/";
+    public const string RestEndpointList = "/api/v2/pokemon-form/";
 }

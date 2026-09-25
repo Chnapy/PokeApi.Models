@@ -16,6 +16,9 @@ public partial class PokemonGenerationI
     [System.Text.Json.Serialization.JsonPropertyName("red-blue")]
     public PokemonRedBlue RedBlue { get; set; } = new PokemonRedBlue();
 
+    [System.Text.Json.Serialization.JsonPropertyName("red-green-japan")]
+    public PokemonRedGreenJapan RedGreenJapan { get; set; } = new PokemonRedGreenJapan();
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

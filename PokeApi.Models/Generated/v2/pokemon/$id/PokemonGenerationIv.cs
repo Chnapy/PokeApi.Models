@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonGenerationIv
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonIcons Icons { get; set; } = new PokemonIcons();
+
     [System.Text.Json.Serialization.JsonPropertyName("platinum")]
     public PokemonPlatinum Platinum { get; set; } = new PokemonPlatinum();
 

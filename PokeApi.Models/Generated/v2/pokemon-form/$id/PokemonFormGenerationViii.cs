@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonFormGenerationViii
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonFormIcons Icons { get; set; } = new PokemonFormIcons();
+
     [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
     public PokemonFormBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new PokemonFormBrilliantDiamondShiningPearl();
 

@@ -10,8 +10,29 @@ namespace PokeApi.Models;
 public partial class PokemonFormVersions
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("generation-i")]
+    public PokemonFormGenerationI GenerationI { get; set; } = new PokemonFormGenerationI();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-v")]
+    public PokemonFormGenerationV GenerationV { get; set; } = new PokemonFormGenerationV();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-ii")]
+    public PokemonFormGenerationIi GenerationIi { get; set; } = new PokemonFormGenerationIi();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-iv")]
+    public PokemonFormGenerationIv GenerationIv { get; set; } = new PokemonFormGenerationIv();
+
     [System.Text.Json.Serialization.JsonPropertyName("generation-ix")]
     public PokemonFormGenerationIx GenerationIx { get; set; } = new PokemonFormGenerationIx();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-vi")]
+    public PokemonFormGenerationVi GenerationVi { get; set; } = new PokemonFormGenerationVi();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-iii")]
+    public PokemonFormGenerationIii GenerationIii { get; set; } = new PokemonFormGenerationIii();
+
+    [System.Text.Json.Serialization.JsonPropertyName("generation-vii")]
+    public PokemonFormGenerationVii GenerationVii { get; set; } = new PokemonFormGenerationVii();
 
     [System.Text.Json.Serialization.JsonPropertyName("generation-viii")]
     public PokemonFormGenerationViii GenerationViii { get; set; } = new PokemonFormGenerationViii();

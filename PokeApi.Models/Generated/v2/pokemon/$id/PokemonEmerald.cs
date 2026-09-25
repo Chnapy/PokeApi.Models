@@ -10,8 +10,17 @@ namespace PokeApi.Models;
 public partial class PokemonEmerald
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("animated")]
+    public PokemonAnimated Animated { get; set; } = new PokemonAnimated();
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
+    public string? BackShiny { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
     public string? FrontShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
+    public string? BackDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
     public string? FrontDefault { get; set; } = default!;

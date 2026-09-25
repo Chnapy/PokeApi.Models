@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonHeartgoldSoulsilver
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("animated")]
+    public PokemonAnimated Animated { get; set; } = new PokemonAnimated();
+
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
     public string? BackShiny { get; set; } = default!;
 

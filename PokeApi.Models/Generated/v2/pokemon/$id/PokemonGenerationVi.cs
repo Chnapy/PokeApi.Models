@@ -13,6 +13,9 @@ public partial class PokemonGenerationVi
     [System.Text.Json.Serialization.JsonPropertyName("x-y")]
     public PokemonXY XY { get; set; } = new PokemonXY();
 
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonIcons Icons { get; set; } = new PokemonIcons();
+
     [System.Text.Json.Serialization.JsonPropertyName("omegaruby-alphasapphire")]
     public PokemonOmegarubyAlphasapphire OmegarubyAlphasapphire { get; set; } = new PokemonOmegarubyAlphasapphire();
 

@@ -7,8 +7,17 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFrontShinyFemale
+public partial class PokemonFormGenerationVii
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonFormIcons Icons { get; set; } = new PokemonFormIcons();
+
+    [System.Text.Json.Serialization.JsonPropertyName("ultra-sun-ultra-moon")]
+    public PokemonFormUltraSunUltraMoon UltraSunUltraMoon { get; set; } = new PokemonFormUltraSunUltraMoon();
+
+    [System.Text.Json.Serialization.JsonPropertyName("lets-go-pikachu-lets-go-eevee")]
+    public PokemonFormLetsGoPikachuLetsGoEevee LetsGoPikachuLetsGoEevee { get; set; } = new PokemonFormLetsGoPikachuLetsGoEevee();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

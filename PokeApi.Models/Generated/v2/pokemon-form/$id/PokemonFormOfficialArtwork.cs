@@ -7,8 +7,17 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFrontFemale
+public partial class PokemonFormOfficialArtwork
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("versions")]
+    public PokemonFormVersions Versions { get; set; } = new PokemonFormVersions();
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
+    public string? FrontShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
+    public string? FrontDefault { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

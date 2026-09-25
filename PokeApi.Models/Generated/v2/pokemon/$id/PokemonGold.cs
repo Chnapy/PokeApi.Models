@@ -22,8 +22,17 @@ public partial class PokemonGold
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
     public string? FrontDefault { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("back_transparent")]
+    public string? BackTransparent { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("front_transparent")]
     public string? FrontTransparent { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_transparent")]
+    public string? BackShinyTransparent { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_shiny_transparent")]
+    public string? FrontShinyTransparent { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

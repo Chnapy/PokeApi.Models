@@ -10,17 +10,29 @@ namespace PokeApi.Models;
 public partial class PokemonUltraSunUltraMoon
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
+    public string? BackShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_female")]
+    public string? BackFemale { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
-    public PokemonFrontShiny? FrontShiny { get; set; } = default!;
+    public string? FrontShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_default")]
+    public string? BackDefault { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_female")]
-    public PokemonFrontFemale? FrontFemale { get; set; } = default!;
+    public string? FrontFemale { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public PokemonFrontDefault? FrontDefault { get; set; } = default!;
+    public string? FrontDefault { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_shiny_female")]
+    public string? BackShinyFemale { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny_female")]
-    public PokemonFrontShinyFemale? FrontShinyFemale { get; set; } = default!;
+    public string? FrontShinyFemale { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

@@ -10,8 +10,14 @@ namespace PokeApi.Models;
 public partial class PokemonYellow
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("back_gbc")]
+    public string? BackGbc { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("back_gray")]
     public string? BackGray { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_gbc")]
+    public string? FrontGbc { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("front_gray")]
     public string? FrontGray { get; set; } = default!;
@@ -27,6 +33,12 @@ public partial class PokemonYellow
 
     [System.Text.Json.Serialization.JsonPropertyName("front_transparent")]
     public string? FrontTransparent { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("back_transparent_gray")]
+    public string? BackTransparentGray { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_transparent_gray")]
+    public string? FrontTransparentGray { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

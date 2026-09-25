@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonFormSprites
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("other")]
+    public PokemonFormOther Other { get; set; } = new PokemonFormOther();
+
     [System.Text.Json.Serialization.JsonPropertyName("versions")]
     public PokemonFormVersions Versions { get; set; } = new PokemonFormVersions();
 

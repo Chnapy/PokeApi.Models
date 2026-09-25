@@ -28,6 +28,12 @@ public partial class PokemonRedBlue
     [System.Text.Json.Serialization.JsonPropertyName("front_transparent")]
     public string? FrontTransparent { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("back_transparent_gray")]
+    public string? BackTransparentGray { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("front_transparent_gray")]
+    public string? FrontTransparentGray { get; set; } = default!;
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

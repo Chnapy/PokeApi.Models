@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class PokemonOfficialArtwork
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("versions")]
+    public PokemonVersions Versions { get; set; } = new PokemonVersions();
+
     [System.Text.Json.Serialization.JsonPropertyName("front_shiny")]
     public string? FrontShiny { get; set; } = default!;
 

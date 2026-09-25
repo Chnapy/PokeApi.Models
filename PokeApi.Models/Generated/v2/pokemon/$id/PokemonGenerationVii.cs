@@ -16,6 +16,9 @@ public partial class PokemonGenerationVii
     [System.Text.Json.Serialization.JsonPropertyName("ultra-sun-ultra-moon")]
     public PokemonUltraSunUltraMoon UltraSunUltraMoon { get; set; } = new PokemonUltraSunUltraMoon();
 
+    [System.Text.Json.Serialization.JsonPropertyName("lets-go-pikachu-lets-go-eevee")]
+    public PokemonLetsGoPikachuLetsGoEevee LetsGoPikachuLetsGoEevee { get; set; } = new PokemonLetsGoPikachuLetsGoEevee();
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

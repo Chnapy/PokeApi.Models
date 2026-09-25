@@ -7,8 +7,14 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFrontDefault
+public partial class PokemonFormGenerationV
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonFormIcons Icons { get; set; } = new PokemonFormIcons();
+
+    [System.Text.Json.Serialization.JsonPropertyName("black-white")]
+    public PokemonFormBlackWhite BlackWhite { get; set; } = new PokemonFormBlackWhite();
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
