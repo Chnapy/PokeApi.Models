@@ -22,6 +22,9 @@ public partial class EvolutionVariable
     [System.Text.Json.Serialization.JsonPropertyName("data_type")]
     public string DataType { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("source")]
+    public string Source { get; set; } = default!;
+
     [System.Text.Json.Serialization.JsonPropertyName("version_group")]
     public NamedApiResource VersionGroup { get; set; } = new NamedApiResource();
 
