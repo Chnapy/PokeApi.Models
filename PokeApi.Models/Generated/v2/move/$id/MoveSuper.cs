@@ -7,8 +7,14 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class EvolutionChainAllowedNatures
+public partial class MoveSuper
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("use_before")]
+    public System.Collections.Generic.ICollection<NamedApiResource>? UseBefore { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("use_after")]
+    public System.Collections.Generic.ICollection<NamedApiResource>? UseAfter { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

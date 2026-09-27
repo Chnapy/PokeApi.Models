@@ -10,6 +10,12 @@ namespace PokeApi.Models;
 public partial class MoveContestCombos
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("normal")]
+    public MoveNormal Normal { get; set; } = new MoveNormal();
+
+    [System.Text.Json.Serialization.JsonPropertyName("super")]
+    public MoveSuper Super { get; set; } = new MoveSuper();
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

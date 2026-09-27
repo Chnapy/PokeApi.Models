@@ -10,6 +10,42 @@ namespace PokeApi.Models;
 public partial class MoveMeta
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("ailment")]
+    public NamedApiResource Ailment { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("category")]
+    public NamedApiResource Category { get; set; } = new NamedApiResource();
+
+    [System.Text.Json.Serialization.JsonPropertyName("min_hits")]
+    public int? MinHits { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("max_hits")]
+    public int? MaxHits { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("min_turns")]
+    public int? MinTurns { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("max_turns")]
+    public int? MaxTurns { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("drain")]
+    public int Drain { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("healing")]
+    public int Healing { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("crit_rate")]
+    public int CritRate { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("ailment_chance")]
+    public int AilmentChance { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("flinch_chance")]
+    public int FlinchChance { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("stat_chance")]
+    public int StatChance { get; set; } = default!;
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

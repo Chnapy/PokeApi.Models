@@ -10,6 +10,18 @@ namespace PokeApi.Models;
 public partial class LocationAreaPokemonDetails
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("min_perfect_ivs")]
+    public LocationAreaMinPerfectIvs? MinPerfectIvs { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("always_shiny")]
+    public bool AlwaysShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("never_shiny")]
+    public bool NeverShiny { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("is_alpha")]
+    public bool IsAlpha { get; set; } = default!;
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]

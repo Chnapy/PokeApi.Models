@@ -52,7 +52,9 @@ public class JsonSchemaLoader(string input)
                         if (property.Value.Type != JTokenType.Object)
                             continue;
 
-                        foreach (var prop in ((JObject)property.Value).Properties())
+                        var props = ((JObject)property.Value).Properties();
+
+                        foreach (var prop in props)
                         {
 
                             if (prop.Name == "anyOf" || prop.Name == "oneOf")
@@ -75,6 +77,11 @@ public class JsonSchemaLoader(string input)
 
                                     foreach (var req in requiredToRemove)
                                         req.Remove();
+                                }
+
+                                if (values.Count() == 1)
+                                {
+                                    property.Value = values.First();
                                 }
                             }
                         }

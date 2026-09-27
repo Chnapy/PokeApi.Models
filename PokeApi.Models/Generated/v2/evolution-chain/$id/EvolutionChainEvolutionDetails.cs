@@ -98,7 +98,7 @@ public partial class EvolutionChainEvolutionDetails
     public int? MinDamageTaken { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("allowed_natures")]
-    public EvolutionChainAllowedNatures? AllowedNatures { get; set; } = default!;
+    public System.Collections.Generic.ICollection<NamedApiResource>? AllowedNatures { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("condition_expression")]
     public EvolutionChainConditionExpression? ConditionExpression { get; set; } = default!;
