@@ -7,11 +7,8 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFormBrilliantDiamondShiningPearl
+public partial class PokemonFrontDefault
 {
-
-    [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public PokemonFormFrontDefault? FrontDefault { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

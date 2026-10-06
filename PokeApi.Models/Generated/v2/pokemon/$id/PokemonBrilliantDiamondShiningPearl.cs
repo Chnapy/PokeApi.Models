@@ -11,7 +11,7 @@ public partial class PokemonBrilliantDiamondShiningPearl
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("front_default")]
-    public string? FrontDefault { get; set; } = default!;
+    public PokemonFrontDefault? FrontDefault { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
