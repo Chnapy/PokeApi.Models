@@ -13,6 +13,12 @@ public partial class PokemonFormGenerationViii
     [System.Text.Json.Serialization.JsonPropertyName("icons")]
     public PokemonFormIcons Icons { get; set; } = new PokemonFormIcons();
 
+    [System.Text.Json.Serialization.JsonPropertyName("sword-shield")]
+    public PokemonFormSwordShield SwordShield { get; set; } = new PokemonFormSwordShield();
+
+    [System.Text.Json.Serialization.JsonPropertyName("legends-arceus")]
+    public PokemonFormLegendsArceus LegendsArceus { get; set; } = new PokemonFormLegendsArceus();
+
     [System.Text.Json.Serialization.JsonPropertyName("brilliant-diamond-shining-pearl")]
     public PokemonFormBrilliantDiamondShiningPearl BrilliantDiamondShiningPearl { get; set; } = new PokemonFormBrilliantDiamondShiningPearl();
 

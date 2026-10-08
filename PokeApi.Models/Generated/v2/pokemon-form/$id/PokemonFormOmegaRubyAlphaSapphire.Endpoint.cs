@@ -6,7 +6,7 @@
 
 namespace PokeApi.Models;
 
-public partial class PokemonFormOmegarubyAlphasapphire
+public partial class PokemonFormOmegaRubyAlphaSapphire
 {
     /// <summary>PokeAPI/api-data file endpoint for this resource.</summary>
     public const string FileEndpoint = "/api/v2/pokemon-form/$id/index.json";

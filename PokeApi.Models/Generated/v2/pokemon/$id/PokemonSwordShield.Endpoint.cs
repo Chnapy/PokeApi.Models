@@ -6,7 +6,7 @@
 
 namespace PokeApi.Models;
 
-public partial class PokemonOmegarubyAlphasapphire
+public partial class PokemonSwordShield
 {
     /// <summary>PokeAPI/api-data file endpoint for this resource.</summary>
     public const string FileEndpoint = "/api/v2/pokemon/$id/index.json";

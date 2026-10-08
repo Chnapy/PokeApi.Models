@@ -7,8 +7,11 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFormOmegarubyAlphasapphire
+public partial class PokemonFormSwordShield
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("icons")]
+    public PokemonFormIcons Icons { get; set; } = new PokemonFormIcons();
 
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
     public string? BackShiny { get; set; } = default!;

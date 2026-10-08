@@ -6,7 +6,7 @@
 
 namespace PokeApi.Models;
 
-public partial class PokemonFormFrontDefault
+public partial class PokemonFormSwordShield
 {
     /// <summary>PokeAPI/api-data file endpoint for this resource.</summary>
     public const string FileEndpoint = "/api/v2/pokemon-form/$id/index.json";

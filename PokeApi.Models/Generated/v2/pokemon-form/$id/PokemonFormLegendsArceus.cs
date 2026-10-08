@@ -7,7 +7,7 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonFormBrilliantDiamondShiningPearl
+public partial class PokemonFormLegendsArceus
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("icons")]

@@ -7,7 +7,7 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonOmegarubyAlphasapphire
+public partial class PokemonOmegaRubyAlphaSapphire
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("back_shiny")]
