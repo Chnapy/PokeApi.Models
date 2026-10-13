@@ -13,6 +13,9 @@ public partial class PokemonFormGenerationIx
     [System.Text.Json.Serialization.JsonPropertyName("champions")]
     public PokemonFormChampions Champions { get; set; } = new PokemonFormChampions();
 
+    [System.Text.Json.Serialization.JsonPropertyName("legends-za")]
+    public PokemonFormLegendsZa LegendsZa { get; set; } = new PokemonFormLegendsZa();
+
     [System.Text.Json.Serialization.JsonPropertyName("scarlet-violet")]
     public PokemonFormScarletViolet ScarletViolet { get; set; } = new PokemonFormScarletViolet();
 
