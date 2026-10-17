@@ -11,7 +11,7 @@ public partial class ItemSprites
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("default")]
-    public string? Default { get; set; } = default!;
+    public string Default { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
