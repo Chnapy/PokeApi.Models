@@ -7,8 +7,14 @@
 namespace PokeApi.Models;
 
 [System.CodeDom.Compiler.GeneratedCode("NJsonSchema", "11.6.1.0 (Newtonsoft.Json v13.0.0.0)")]
-public partial class PokemonEncountersMinPerfectIvs
+public partial class TypeChampions
 {
+
+    [System.Text.Json.Serialization.JsonPropertyName("name_icon")]
+    public string? NameIcon { get; set; } = default!;
+
+    [System.Text.Json.Serialization.JsonPropertyName("symbol_icon")]
+    public string? SymbolIcon { get; set; } = default!;
 
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 

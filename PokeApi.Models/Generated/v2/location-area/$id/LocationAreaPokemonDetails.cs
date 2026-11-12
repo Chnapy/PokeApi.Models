@@ -11,7 +11,7 @@ public partial class LocationAreaPokemonDetails
 {
 
     [System.Text.Json.Serialization.JsonPropertyName("min_perfect_ivs")]
-    public LocationAreaMinPerfectIvs? MinPerfectIvs { get; set; } = default!;
+    public int? MinPerfectIvs { get; set; } = default!;
 
     [System.Text.Json.Serialization.JsonPropertyName("always_shiny")]
     public bool AlwaysShiny { get; set; } = default!;

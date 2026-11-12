@@ -10,6 +10,9 @@ namespace PokeApi.Models;
 public partial class TypeGenerationIx
 {
 
+    [System.Text.Json.Serialization.JsonPropertyName("champions")]
+    public TypeChampions Champions { get; set; } = new TypeChampions();
+
     [System.Text.Json.Serialization.JsonPropertyName("scarlet-violet")]
     public TypeScarletViolet ScarletViolet { get; set; } = new TypeScarletViolet();
 
