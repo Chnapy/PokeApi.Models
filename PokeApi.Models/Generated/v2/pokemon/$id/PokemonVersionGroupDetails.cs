@@ -22,6 +22,9 @@ public partial class PokemonVersionGroupDetails
     [System.Text.Json.Serialization.JsonPropertyName("order")]
     public int? Order { get; set; } = default!;
 
+    [System.Text.Json.Serialization.JsonPropertyName("enhancement_level")]
+    public int? EnhancementLevel { get; set; } = default!;
+
     private System.Collections.Generic.IDictionary<string, object>? _additionalProperties;
 
     [System.Text.Json.Serialization.JsonExtensionData]
